@@ -1,0 +1,151 @@
+package cn.yiidii.openapi.unicommeituan.service.impl;
+
+import cn.yiidii.openapi.common.util.HttpClientUtil;
+import cn.yiidii.openapi.common.util.dto.HttpClientResult;
+import cn.yiidii.openapi.entity.ChinaUnicomInfo;
+import cn.yiidii.openapi.unicommeituan.controller.form.ChinaUnicomInfoFrom;
+import cn.yiidii.openapi.unicommeituan.dto.MeiTuanGoods;
+import cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy;
+import cn.yiidii.openapi.unicommeituan.service.ChinaUnicomInfoService;
+import cn.yiidii.openapi.unicommeituan.service.MeituanService;
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
+import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
+import java.util.*;
+import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
+
+@Service
+@Slf4j
+public class MeituanServiceImpl implements MeituanService {
+
+    @Autowired
+    private ChinaUnicomInfoService chinaUnicomInfoService;
+
+    /**
+     * 美团下单线程池
+     */
+    @Autowired
+    @Resource(name = "meituanTaskExcutor")
+    private ThreadPoolTaskExecutor meituanTaskExcutor;
+
+    @Async("chinaUnicomTaskExcutor")
+    @Scheduled(fixedDelay = 300)
+//    @Scheduled(fixedDelay = 60000)
+    public void robTicket() {
+        List<ChinaUnicomInfo> allInfo = chinaUnicomInfoService.getAllChinaUnicom();
+        log.info("当前有{}个手机号", allInfo.size());
+        if (Objects.isNull(allInfo) || allInfo.size() <= 0) {
+            return;
+        }
+        allInfo.forEach(chinaUnicomInfo -> {
+            List<MeiTuanGoods> goodsList = null;
+            try {
+                goodsList = getGoodsList(chinaUnicomInfo);
+            } catch (Exception e) {
+            }
+            if (Objects.isNull(goodsList) || goodsList.size() == 0) {
+                log.info("{} 获取商品失败, 删除之", chinaUnicomInfo.getPhoneNum());
+//                chinaUnicomInfoService.delChinaUnicomInfoByPhoneNum(chinaUnicomInfo.getPhoneNum());
+                return;
+            }
+            goodsList.forEach(singleGoods -> {
+                try {
+                    MeituanTaskProxy proxy = new MeituanTaskProxy(chinaUnicomInfo, singleGoods);
+                    meituanTaskExcutor.submit(proxy);
+                } catch (Exception e) {
+                    log.info("提交订单发生异常, 删除之: {}", e.toString());
+//                    chinaUnicomInfoService.delChinaUnicomInfoByPhoneNum(chinaUnicomInfo.getPhoneNum());
+                }
+            });
+
+        });
+    }
+
+    @Override
+    public String meituanTest(ChinaUnicomInfoFrom chinaUnicomInfoFrom) {
+        ChinaUnicomInfo chinaUnicomInfo = new ChinaUnicomInfo();
+        BeanUtils.copyProperties(chinaUnicomInfoFrom, chinaUnicomInfo);
+        List<MeiTuanGoods> goodsList = null;
+        try {
+            goodsList = this.getGoodsList(chinaUnicomInfo);
+        } catch (Exception e) {
+            return "获取商品失败, 可能是Cookie失效了!";
+        }
+        if (Objects.isNull(goodsList) || goodsList.size() <= 0) {
+            return "获取商品失败, 可能是Cookie失效了!";
+        }
+        MeiTuanGoods meiTuanGoods = goodsList.get(0);
+        try {
+            MeituanTaskProxy proxy = new MeituanTaskProxy(chinaUnicomInfo, meiTuanGoods);
+            Future<Object> future = meituanTaskExcutor.submit(proxy);
+            Object o = future.get(1500, TimeUnit.MILLISECONDS);
+            return o.toString();
+        } catch (Exception e) {
+            log.info("提交订单发生异常: {}", e.toString());
+            return String.format("提交订单发生异常: %s", e.toString());
+        }
+    }
+
+    @Override
+    public List<MeiTuanGoods> getGoodsList(ChinaUnicomInfo chinaUnicomInfo) throws Exception {
+        String url = "https://m.client.10010.com/welfare-mall-front-activity/mobile/activity/get619Activity/v1?whetherFriday=YES&from=955000006";
+        Map<String, String> headers = new HashMap<>(2);
+        headers.put("Cookie", chinaUnicomInfo.getCookie());
+        headers.put("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.92 Safari/537.36");
+        HttpClientResult httpClientResult = new HttpClientUtil().doGet(url, headers, null);
+        if (httpClientResult.getCode() == 200) {
+            JSONObject respJo = JSONObject.parseObject(httpClientResult.getContent());
+            JSONObject resdata = respJo.getJSONObject("resdata");
+            JSONArray goodsListJa = resdata.getJSONArray("goodsList");
+            List<MeiTuanGoods> goodsList = new LinkedList<>();
+            goodsListJa.forEach(obj -> {
+                JSONObject jo = (JSONObject) obj;
+                MeiTuanGoods info = new MeiTuanGoods();
+                info.setGoodsName(jo.getString("gOODS_NAME"));
+                info.setLinkUrl(jo.getString("lINKURL"));
+                String goodsSkuId = jo.getString("gOODS_SKU_ID");
+                info.setGoodsSkuId(goodsSkuId);
+                info.setMarketPrice(jo.getDouble("mARKET_PRICE"));
+                info.setBeginTime(jo.getLong("beginTime"));
+                info.setEndTime(jo.getLong("endTime"));
+                info.setState(jo.getInteger("state"));
+                try {
+                    info.setCurrSalePrice(getCurrSalePrice(chinaUnicomInfo, goodsSkuId));
+                } catch (Exception e) {
+                }
+                goodsList.add(info);
+            });
+            return goodsList;
+        } else {
+            log.info("{}获取商品失败，响应:{}", chinaUnicomInfo.getPhoneNum(), JSONObject.toJSONString(httpClientResult));
+            return null;
+        }
+    }
+
+    @Override
+    public double getCurrSalePrice(ChinaUnicomInfo chinaUnicomInfo, String goodsSkuId) throws Exception {
+        String url = "https://m.client.10010.com/welfare-mall-front-activity/mobile/activity/getGoodsTradePrice/v2";
+        Map<String, String> headers = new HashMap<>(2);
+        headers.put("Cookie", chinaUnicomInfo.getCookie());
+        headers.put("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.92 Safari/537.36");
+        HttpClientResult httpClientResult = new HttpClientUtil().doGet(url, headers, null);
+        if (httpClientResult.getCode() == 200) {
+            JSONObject respJo = JSONObject.parseObject(httpClientResult.getContent());
+            JSONObject resdata = respJo.getJSONObject("resdata");
+            double currSalePrice = resdata.getDouble(goodsSkuId);
+            return currSalePrice;
+        } else {
+            System.out.println(String.format("%s获取商品失败，响应:%s", chinaUnicomInfo.getPhoneNum(), JSONObject.toJSONString(httpClientResult)));
+            return 0D;
+        }
+    }
+}

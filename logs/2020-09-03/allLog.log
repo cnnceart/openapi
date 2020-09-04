@@ -1,0 +1,461 @@
+2020-09-03 21:50:26 895 [main] INFO  55 cn.yiidii.openapi.OpenapiApplicationTests - Starting OpenapiApplicationTests on WYD-PC with PID 13156 (started by Wang in C:\Users\Wang\wang\soft\ideaProject\openapi)
+2020-09-03 21:50:26 899 [main] INFO  651 cn.yiidii.openapi.OpenapiApplicationTests - No active profile set, falling back to default profiles: default
+2020-09-03 21:50:30 021 [main] INFO  30 cn.yiidii.openapi.config.SwaggerConfig - init SwaggerConfig...
+2020-09-03 21:50:33 048 [main] INFO  69 springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-09-03 21:50:34 131 [main] INFO  160 springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-09-03 21:50:34 205 [main] INFO  163 springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-09-03 21:50:34 274 [main] INFO  41 springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-09-03 21:50:34 492 [main] INFO  61 cn.yiidii.openapi.OpenapiApplicationTests - Started OpenapiApplicationTests in 8.43 seconds (JVM running for 9.874)
+2020-09-03 21:55:54 643 [main] INFO  55 cn.yiidii.openapi.OpenapiApplication - Starting OpenapiApplication on WYD-PC with PID 5356 (C:\Users\Wang\wang\soft\ideaProject\openapi\target\classes started by Wang in C:\Users\Wang\wang\soft\ideaProject\openapi)
+2020-09-03 21:55:54 646 [main] INFO  651 cn.yiidii.openapi.OpenapiApplication - No active profile set, falling back to default profiles: default
+2020-09-03 21:55:55 590 [main] INFO  30 cn.yiidii.openapi.config.SwaggerConfig - init SwaggerConfig...
+2020-09-03 21:55:55 972 [main] INFO  173 org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-65530"]
+2020-09-03 21:55:55 973 [main] INFO  173 org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-09-03 21:55:55 973 [main] INFO  173 org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-09-03 21:55:56 101 [main] INFO  173 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/openapi/v1] - Initializing Spring embedded WebApplicationContext
+2020-09-03 21:55:57 464 [main] INFO  69 springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-09-03 21:55:57 693 [main] INFO  173 org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-65530"]
+2020-09-03 21:55:57 714 [main] INFO  160 springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-09-03 21:55:57 731 [main] INFO  163 springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-09-03 21:55:57 761 [main] INFO  41 springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-09-03 21:55:57 891 [main] INFO  61 cn.yiidii.openapi.OpenapiApplication - Started OpenapiApplication in 3.911 seconds (JVM running for 5.214)
+2020-09-03 21:55:58 124 [Async-chinaUnicomTaskExcutor-1] INFO  47 cn.yiidii.openapi.unicommeituan.service.impl.MeituanServiceImpl - 当前有1个手机号
+2020-09-03 21:56:00 561 [Async-meituanTask-2] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 21:56:00 574 [Async-meituanTask-1] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 21:56:00 574 [Async-meituanTask-3] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 21:56:00 589 [Async-meituanTask-4] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 21:56:00 622 [Async-meituanTask-5] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 21:56:39 929 [main] INFO  55 cn.yiidii.openapi.OpenapiApplicationTests - Starting OpenapiApplicationTests on WYD-PC with PID 11520 (started by Wang in C:\Users\Wang\wang\soft\ideaProject\openapi)
+2020-09-03 21:56:39 932 [main] INFO  651 cn.yiidii.openapi.OpenapiApplicationTests - No active profile set, falling back to default profiles: default
+2020-09-03 21:56:41 092 [main] INFO  30 cn.yiidii.openapi.config.SwaggerConfig - init SwaggerConfig...
+2020-09-03 21:56:43 775 [main] INFO  69 springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-09-03 21:56:44 841 [main] INFO  160 springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-09-03 21:56:44 881 [main] INFO  163 springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-09-03 21:56:44 930 [main] INFO  41 springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-09-03 21:56:45 163 [main] INFO  61 cn.yiidii.openapi.OpenapiApplicationTests - Started OpenapiApplicationTests in 5.694 seconds (JVM running for 6.681)
+2020-09-03 22:19:25 083 [main] INFO  55 cn.yiidii.openapi.OpenapiApplication - Starting OpenapiApplication on WYD-PC with PID 10836 (C:\Users\Wang\wang\soft\ideaProject\openapi\target\classes started by Wang in C:\Users\Wang\wang\soft\ideaProject\openapi)
+2020-09-03 22:19:25 087 [main] INFO  651 cn.yiidii.openapi.OpenapiApplication - No active profile set, falling back to default profiles: default
+2020-09-03 22:19:26 197 [main] INFO  30 cn.yiidii.openapi.config.SwaggerConfig - init SwaggerConfig...
+2020-09-03 22:19:26 578 [main] INFO  173 org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-65531"]
+2020-09-03 22:19:26 579 [main] INFO  173 org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-09-03 22:19:26 579 [main] INFO  173 org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-09-03 22:19:26 714 [main] INFO  173 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/openapi/v1] - Initializing Spring embedded WebApplicationContext
+2020-09-03 22:19:28 171 [main] INFO  69 springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-09-03 22:19:28 425 [main] INFO  173 org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-65531"]
+2020-09-03 22:19:28 446 [main] INFO  160 springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-09-03 22:19:28 463 [main] INFO  163 springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-09-03 22:19:28 493 [main] INFO  41 springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-09-03 22:19:28 621 [main] INFO  61 cn.yiidii.openapi.OpenapiApplication - Started OpenapiApplication in 4.202 seconds (JVM running for 5.654)
+2020-09-03 22:19:28 857 [Async-chinaUnicomTaskExcutor-1] INFO  47 cn.yiidii.openapi.unicommeituan.service.impl.MeituanServiceImpl - 当前有1个手机号
+2020-09-03 22:19:33 449 [Async-meituanTask-4] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:19:33 456 [Async-meituanTask-5] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:19:33 471 [Async-meituanTask-1] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:19:33 477 [Async-meituanTask-3] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:19:33 479 [Async-meituanTask-2] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:20:17 897 [http-nio-65531-exec-1] INFO  173 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/openapi/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-03 22:20:28 625 [Async-chinaUnicomTaskExcutor-2] INFO  47 cn.yiidii.openapi.unicommeituan.service.impl.MeituanServiceImpl - 当前有1个手机号
+2020-09-03 22:20:29 370 [Async-meituanTask-8] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:20:29 370 [Async-meituanTask-6] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:20:29 407 [Async-meituanTask-10] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:20:29 407 [Async-meituanTask-9] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:20:29 407 [Async-meituanTask-7] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:21:28 625 [Async-chinaUnicomTaskExcutor-3] INFO  47 cn.yiidii.openapi.unicommeituan.service.impl.MeituanServiceImpl - 当前有1个手机号
+2020-09-03 22:21:29 352 [Async-meituanTask-13] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:21:29 360 [Async-meituanTask-15] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:21:29 360 [Async-meituanTask-12] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:21:29 361 [Async-meituanTask-11] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:21:29 376 [Async-meituanTask-14] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:22:28 631 [Async-chinaUnicomTaskExcutor-4] INFO  47 cn.yiidii.openapi.unicommeituan.service.impl.MeituanServiceImpl - 当前有1个手机号
+2020-09-03 22:22:29 384 [Async-meituanTask-4] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:22:29 392 [Async-meituanTask-3] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:22:29 406 [Async-meituanTask-5] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:22:29 422 [Async-meituanTask-1] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:22:29 527 [Async-meituanTask-16] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:23:28 628 [Async-chinaUnicomTaskExcutor-5] INFO  47 cn.yiidii.openapi.unicommeituan.service.impl.MeituanServiceImpl - 当前有1个手机号
+2020-09-03 22:23:29 370 [Async-meituanTask-10] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:23:29 370 [Async-meituanTask-8] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:23:29 392 [Async-meituanTask-9] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:23:29 396 [Async-meituanTask-6] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:23:29 396 [Async-meituanTask-2] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:24:28 629 [Async-chinaUnicomTaskExcutor-6] INFO  47 cn.yiidii.openapi.unicommeituan.service.impl.MeituanServiceImpl - 当前有1个手机号
+2020-09-03 22:24:29 380 [Async-meituanTask-12] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:24:29 398 [Async-meituanTask-15] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:24:29 407 [Async-meituanTask-7] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:24:29 407 [Async-meituanTask-11] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:24:29 428 [Async-meituanTask-13] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:25:28 631 [Async-chinaUnicomTaskExcutor-7] INFO  47 cn.yiidii.openapi.unicommeituan.service.impl.MeituanServiceImpl - 当前有1个手机号
+2020-09-03 22:25:29 338 [Async-meituanTask-5] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:25:29 343 [Async-meituanTask-1] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:25:29 348 [Async-meituanTask-3] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:25:29 352 [Async-meituanTask-14] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:25:29 354 [Async-meituanTask-4] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:26:28 634 [Async-chinaUnicomTaskExcutor-8] INFO  47 cn.yiidii.openapi.unicommeituan.service.impl.MeituanServiceImpl - 当前有1个手机号
+2020-09-03 22:26:29 400 [Async-meituanTask-6] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:26:29 426 [Async-meituanTask-16] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:26:29 426 [Async-meituanTask-8] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:26:29 431 [Async-meituanTask-9] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:26:29 431 [Async-meituanTask-10] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:27:28 634 [Async-chinaUnicomTaskExcutor-9] INFO  47 cn.yiidii.openapi.unicommeituan.service.impl.MeituanServiceImpl - 当前有1个手机号
+2020-09-03 22:27:29 278 [Async-meituanTask-15] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:27:29 311 [Async-meituanTask-11] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:27:29 324 [Async-meituanTask-12] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:27:29 325 [Async-meituanTask-2] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:27:29 342 [Async-meituanTask-7] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:28:28 634 [Async-chinaUnicomTaskExcutor-1] INFO  47 cn.yiidii.openapi.unicommeituan.service.impl.MeituanServiceImpl - 当前有1个手机号
+2020-09-03 22:28:29 357 [Async-meituanTask-5] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:28:29 358 [Async-meituanTask-13] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:28:29 371 [Async-meituanTask-1] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:28:29 371 [Async-meituanTask-3] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:28:29 381 [Async-meituanTask-14] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:29:28 635 [Async-chinaUnicomTaskExcutor-2] INFO  47 cn.yiidii.openapi.unicommeituan.service.impl.MeituanServiceImpl - 当前有1个手机号
+2020-09-03 22:29:29 312 [Async-meituanTask-4] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:29:29 333 [Async-meituanTask-6] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:29:29 336 [Async-meituanTask-16] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:29:29 358 [Async-meituanTask-8] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:29:29 359 [Async-meituanTask-9] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:30:28 637 [Async-chinaUnicomTaskExcutor-3] INFO  47 cn.yiidii.openapi.unicommeituan.service.impl.MeituanServiceImpl - 当前有1个手机号
+2020-09-03 22:30:29 362 [Async-meituanTask-11] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:30:29 376 [Async-meituanTask-15] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:30:29 391 [Async-meituanTask-10] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:30:29 394 [Async-meituanTask-2] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:30:29 421 [Async-meituanTask-12] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:31:28 639 [Async-chinaUnicomTaskExcutor-4] INFO  47 cn.yiidii.openapi.unicommeituan.service.impl.MeituanServiceImpl - 当前有1个手机号
+2020-09-03 22:31:29 348 [Async-meituanTask-13] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:31:29 352 [Async-meituanTask-3] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:31:29 369 [Async-meituanTask-7] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:31:29 370 [Async-meituanTask-5] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:31:29 372 [Async-meituanTask-1] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:32:28 639 [Async-chinaUnicomTaskExcutor-5] INFO  47 cn.yiidii.openapi.unicommeituan.service.impl.MeituanServiceImpl - 当前有1个手机号
+2020-09-03 22:32:29 339 [Async-meituanTask-6] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:32:29 345 [Async-meituanTask-8] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:32:29 350 [Async-meituanTask-4] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:32:29 369 [Async-meituanTask-14] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:32:29 378 [Async-meituanTask-16] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:33:28 640 [Async-chinaUnicomTaskExcutor-6] INFO  47 cn.yiidii.openapi.unicommeituan.service.impl.MeituanServiceImpl - 当前有1个手机号
+2020-09-03 22:33:29 348 [Async-meituanTask-10] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:33:29 358 [Async-meituanTask-2] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:33:29 371 [Async-meituanTask-9] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:33:29 380 [Async-meituanTask-11] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:33:29 384 [Async-meituanTask-15] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:34:28 643 [Async-chinaUnicomTaskExcutor-7] INFO  47 cn.yiidii.openapi.unicommeituan.service.impl.MeituanServiceImpl - 当前有1个手机号
+2020-09-03 22:34:29 429 [Async-meituanTask-5] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:34:29 433 [Async-meituanTask-13] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:34:29 442 [Async-meituanTask-7] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:34:29 445 [Async-meituanTask-12] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:34:29 450 [Async-meituanTask-3] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:35:28 641 [Async-chinaUnicomTaskExcutor-8] INFO  47 cn.yiidii.openapi.unicommeituan.service.impl.MeituanServiceImpl - 当前有1个手机号
+2020-09-03 22:35:29 360 [Async-meituanTask-1] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:35:29 370 [Async-meituanTask-6] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:35:29 373 [Async-meituanTask-4] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:35:29 390 [Async-meituanTask-14] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:35:32 376 [Async-meituanTask-8] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:36:28 641 [Async-chinaUnicomTaskExcutor-9] INFO  47 cn.yiidii.openapi.unicommeituan.service.impl.MeituanServiceImpl - 当前有1个手机号
+2020-09-03 22:36:29 348 [Async-meituanTask-9] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:36:29 352 [Async-meituanTask-11] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:36:29 358 [Async-meituanTask-16] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:36:29 358 [Async-meituanTask-2] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:36:29 358 [Async-meituanTask-10] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:37:28 642 [Async-chinaUnicomTaskExcutor-1] INFO  47 cn.yiidii.openapi.unicommeituan.service.impl.MeituanServiceImpl - 当前有1个手机号
+2020-09-03 22:37:29 300 [Async-meituanTask-15] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:37:29 337 [Async-meituanTask-13] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:37:29 341 [Async-meituanTask-12] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:37:29 346 [Async-meituanTask-5] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:37:29 363 [Async-meituanTask-7] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:38:28 643 [Async-chinaUnicomTaskExcutor-2] INFO  47 cn.yiidii.openapi.unicommeituan.service.impl.MeituanServiceImpl - 当前有1个手机号
+2020-09-03 22:38:29 329 [Async-meituanTask-3] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:38:29 333 [Async-meituanTask-6] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:38:29 343 [Async-meituanTask-4] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:38:29 350 [Async-meituanTask-1] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:38:29 350 [Async-meituanTask-14] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:39:28 643 [Async-chinaUnicomTaskExcutor-3] INFO  47 cn.yiidii.openapi.unicommeituan.service.impl.MeituanServiceImpl - 当前有1个手机号
+2020-09-03 22:39:29 335 [Async-meituanTask-9] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:39:29 343 [Async-meituanTask-8] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:39:29 352 [Async-meituanTask-11] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:39:29 352 [Async-meituanTask-2] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:39:29 449 [Async-meituanTask-16] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:40:28 644 [Async-chinaUnicomTaskExcutor-4] INFO  47 cn.yiidii.openapi.unicommeituan.service.impl.MeituanServiceImpl - 当前有1个手机号
+2020-09-03 22:40:29 330 [Async-meituanTask-13] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:40:29 338 [Async-meituanTask-12] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:40:29 348 [Async-meituanTask-5] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:40:29 363 [Async-meituanTask-10] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:40:29 369 [Async-meituanTask-15] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:41:28 644 [Async-chinaUnicomTaskExcutor-5] INFO  47 cn.yiidii.openapi.unicommeituan.service.impl.MeituanServiceImpl - 当前有1个手机号
+2020-09-03 22:41:29 347 [Async-meituanTask-6] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:41:29 369 [Async-meituanTask-4] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:41:29 375 [Async-meituanTask-3] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:41:29 393 [Async-meituanTask-7] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:41:29 402 [Async-meituanTask-1] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:42:28 645 [Async-chinaUnicomTaskExcutor-6] INFO  47 cn.yiidii.openapi.unicommeituan.service.impl.MeituanServiceImpl - 当前有1个手机号
+2020-09-03 22:42:29 364 [Async-meituanTask-14] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:42:29 390 [Async-meituanTask-9] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:42:29 398 [Async-meituanTask-2] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:42:29 406 [Async-meituanTask-11] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:42:29 411 [Async-meituanTask-8] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:43:28 647 [Async-chinaUnicomTaskExcutor-7] INFO  47 cn.yiidii.openapi.unicommeituan.service.impl.MeituanServiceImpl - 当前有1个手机号
+2020-09-03 22:43:29 334 [Async-meituanTask-5] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:43:29 338 [Async-meituanTask-13] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:43:29 342 [Async-meituanTask-16] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:43:29 348 [Async-meituanTask-10] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:43:32 346 [Async-meituanTask-12] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:44:28 648 [Async-chinaUnicomTaskExcutor-8] INFO  47 cn.yiidii.openapi.unicommeituan.service.impl.MeituanServiceImpl - 当前有1个手机号
+2020-09-03 22:44:30 923 [Async-meituanTask-7] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:44:30 924 [Async-meituanTask-15] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:44:30 966 [Async-meituanTask-3] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:44:30 975 [Async-meituanTask-6] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:44:31 047 [Async-meituanTask-4] INFO  40 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:45:28 650 [Async-chinaUnicomTaskExcutor-9] INFO  47 cn.yiidii.openapi.unicommeituan.service.impl.MeituanServiceImpl - 当前有1个手机号
+2020-09-03 22:52:55 634 [main] INFO  55 cn.yiidii.openapi.OpenapiApplication - Starting OpenapiApplication on WYD-PC with PID 15144 (C:\Users\Wang\wang\soft\ideaProject\openapi\target\classes started by Wang in C:\Users\Wang\wang\soft\ideaProject\openapi)
+2020-09-03 22:52:55 638 [main] INFO  651 cn.yiidii.openapi.OpenapiApplication - No active profile set, falling back to default profiles: default
+2020-09-03 22:52:56 689 [main] INFO  30 cn.yiidii.openapi.config.SwaggerConfig - init SwaggerConfig...
+2020-09-03 22:52:57 064 [main] INFO  173 org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-65531"]
+2020-09-03 22:52:57 065 [main] INFO  173 org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-09-03 22:52:57 066 [main] INFO  173 org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-09-03 22:52:57 226 [main] INFO  173 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/openapi/v1] - Initializing Spring embedded WebApplicationContext
+2020-09-03 22:52:58 869 [main] INFO  69 springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-09-03 22:52:59 161 [main] INFO  173 org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-65531"]
+2020-09-03 22:52:59 183 [main] INFO  160 springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-09-03 22:52:59 201 [main] INFO  163 springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-09-03 22:52:59 246 [main] INFO  41 springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-09-03 22:52:59 446 [main] INFO  61 cn.yiidii.openapi.OpenapiApplication - Started OpenapiApplication in 4.469 seconds (JVM running for 5.865)
+2020-09-03 22:52:59 736 [Async-chinaUnicomTaskExcutor-1] INFO  47 cn.yiidii.openapi.unicommeituan.service.impl.MeituanServiceImpl - 当前有1个手机号
+2020-09-03 22:53:01 513 [Async-meituanTask-5] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:53:01 516 [Async-meituanTask-1] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:53:01 528 [Async-meituanTask-3] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:53:01 534 [Async-meituanTask-2] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:53:01 535 [Async-meituanTask-4] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:56:02 123 [main] INFO  55 cn.yiidii.openapi.OpenapiApplication - Starting OpenapiApplication on WYD-PC with PID 1956 (C:\Users\Wang\wang\soft\ideaProject\openapi\target\classes started by Wang in C:\Users\Wang\wang\soft\ideaProject\openapi)
+2020-09-03 22:56:02 128 [main] INFO  651 cn.yiidii.openapi.OpenapiApplication - No active profile set, falling back to default profiles: default
+2020-09-03 22:56:03 240 [main] INFO  30 cn.yiidii.openapi.config.SwaggerConfig - init SwaggerConfig...
+2020-09-03 22:56:03 631 [main] INFO  173 org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-65531"]
+2020-09-03 22:56:03 632 [main] INFO  173 org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-09-03 22:56:03 632 [main] INFO  173 org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-09-03 22:56:03 764 [main] INFO  173 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/openapi/v1] - Initializing Spring embedded WebApplicationContext
+2020-09-03 22:56:05 210 [main] INFO  69 springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-09-03 22:56:05 458 [main] INFO  173 org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-65531"]
+2020-09-03 22:56:05 481 [main] INFO  160 springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-09-03 22:56:05 500 [main] INFO  163 springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-09-03 22:56:05 533 [main] INFO  41 springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-09-03 22:56:05 687 [main] INFO  61 cn.yiidii.openapi.OpenapiApplication - Started OpenapiApplication in 4.303 seconds (JVM running for 5.621)
+2020-09-03 22:56:05 916 [Async-chinaUnicomTaskExcutor-1] INFO  47 cn.yiidii.openapi.unicommeituan.service.impl.MeituanServiceImpl - 当前有1个手机号
+2020-09-03 22:56:07 422 [Async-meituanTask-1] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:56:07 426 [Async-meituanTask-3] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:56:07 444 [Async-meituanTask-4] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:56:07 444 [Async-meituanTask-2] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:56:07 450 [Async-meituanTask-5] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:56:16 385 [http-nio-65531-exec-1] INFO  173 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/openapi/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-03 22:57:05 690 [Async-chinaUnicomTaskExcutor-2] INFO  47 cn.yiidii.openapi.unicommeituan.service.impl.MeituanServiceImpl - 当前有1个手机号
+2020-09-03 22:57:06 357 [Async-meituanTask-9] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:57:06 391 [Async-meituanTask-6] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:57:06 403 [Async-meituanTask-10] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:57:06 416 [Async-meituanTask-8] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:57:06 426 [Async-meituanTask-7] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:58:05 692 [Async-chinaUnicomTaskExcutor-3] INFO  47 cn.yiidii.openapi.unicommeituan.service.impl.MeituanServiceImpl - 当前有1个手机号
+2020-09-03 22:58:06 427 [Async-meituanTask-15] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:58:15 179 [Async-meituanTask-13] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:58:15 179 [Async-meituanTask-12] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:58:15 179 [Async-meituanTask-11] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:58:15 179 [Async-meituanTask-14] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:59:05 699 [Async-chinaUnicomTaskExcutor-4] INFO  47 cn.yiidii.openapi.unicommeituan.service.impl.MeituanServiceImpl - 当前有1个手机号
+2020-09-03 22:59:06 479 [Async-meituanTask-5] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:59:06 495 [Async-meituanTask-4] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:59:06 496 [Async-meituanTask-2] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:59:06 497 [Async-meituanTask-16] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:59:06 506 [Async-meituanTask-1] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:59:37 532 [main] INFO  55 cn.yiidii.openapi.OpenapiApplication - Starting OpenapiApplication on WYD-PC with PID 14856 (C:\Users\Wang\wang\soft\ideaProject\openapi\target\classes started by Wang in C:\Users\Wang\wang\soft\ideaProject\openapi)
+2020-09-03 22:59:37 536 [main] INFO  651 cn.yiidii.openapi.OpenapiApplication - No active profile set, falling back to default profiles: default
+2020-09-03 22:59:38 529 [main] INFO  30 cn.yiidii.openapi.config.SwaggerConfig - init SwaggerConfig...
+2020-09-03 22:59:38 915 [main] INFO  173 org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-65531"]
+2020-09-03 22:59:38 916 [main] INFO  173 org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-09-03 22:59:38 916 [main] INFO  173 org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-09-03 22:59:39 050 [main] INFO  173 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/openapi/v1] - Initializing Spring embedded WebApplicationContext
+2020-09-03 22:59:40 453 [main] INFO  69 springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-09-03 22:59:40 689 [main] INFO  173 org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-65531"]
+2020-09-03 22:59:40 710 [main] INFO  160 springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-09-03 22:59:40 732 [main] INFO  163 springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-09-03 22:59:40 762 [main] INFO  41 springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-09-03 22:59:40 894 [main] INFO  61 cn.yiidii.openapi.OpenapiApplication - Started OpenapiApplication in 4.05 seconds (JVM running for 5.311)
+2020-09-03 22:59:41 138 [Async-chinaUnicomTaskExcutor-1] INFO  47 cn.yiidii.openapi.unicommeituan.service.impl.MeituanServiceImpl - 当前有1个手机号
+2020-09-03 22:59:42 622 [Async-meituanTask-1] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:59:42 633 [Async-meituanTask-2] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:59:42 642 [Async-meituanTask-4] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:59:42 642 [Async-meituanTask-3] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:59:42 662 [Async-meituanTask-5] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:59:42 987 [Async-meituanTask-3] INFO  25 cn.yiidii.openapi.common.util.ServerJNotify - null发送成功手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:59:43 007 [Async-meituanTask-1] INFO  25 cn.yiidii.openapi.common.util.ServerJNotify - null发送成功手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:59:43 028 [Async-meituanTask-2] INFO  25 cn.yiidii.openapi.common.util.ServerJNotify - null发送成功手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:59:43 035 [Async-meituanTask-5] INFO  25 cn.yiidii.openapi.common.util.ServerJNotify - null发送成功手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 22:59:43 050 [Async-meituanTask-4] INFO  25 cn.yiidii.openapi.common.util.ServerJNotify - null发送成功手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:01:39 341 [main] INFO  55 cn.yiidii.openapi.OpenapiApplication - Starting OpenapiApplication on WYD-PC with PID 14588 (C:\Users\Wang\wang\soft\ideaProject\openapi\target\classes started by Wang in C:\Users\Wang\wang\soft\ideaProject\openapi)
+2020-09-03 23:01:39 346 [main] INFO  651 cn.yiidii.openapi.OpenapiApplication - No active profile set, falling back to default profiles: default
+2020-09-03 23:01:40 759 [main] INFO  30 cn.yiidii.openapi.config.SwaggerConfig - init SwaggerConfig...
+2020-09-03 23:01:41 175 [main] INFO  173 org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-65531"]
+2020-09-03 23:01:41 176 [main] INFO  173 org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-09-03 23:01:41 177 [main] INFO  173 org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-09-03 23:01:41 344 [main] INFO  173 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/openapi/v1] - Initializing Spring embedded WebApplicationContext
+2020-09-03 23:01:42 891 [main] INFO  69 springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-09-03 23:01:43 126 [main] INFO  173 org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-65531"]
+2020-09-03 23:01:43 149 [main] INFO  160 springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-09-03 23:01:43 166 [main] INFO  163 springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-09-03 23:01:43 197 [main] INFO  41 springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-09-03 23:01:43 336 [main] INFO  61 cn.yiidii.openapi.OpenapiApplication - Started OpenapiApplication in 4.833 seconds (JVM running for 6.179)
+2020-09-03 23:01:43 586 [Async-chinaUnicomTaskExcutor-1] INFO  47 cn.yiidii.openapi.unicommeituan.service.impl.MeituanServiceImpl - 当前有1个手机号
+2020-09-03 23:01:45 115 [Async-meituanTask-4] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:01:45 122 [Async-meituanTask-3] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:01:45 122 [Async-meituanTask-2] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:01:45 122 [Async-meituanTask-5] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:01:45 142 [Async-meituanTask-1] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:01:45 509 [Async-meituanTask-4] INFO  25 cn.yiidii.openapi.common.util.ServerJNotify - SCU86980T340dc43602aad5ca9bdeb5bff70577c35e59cff78a15e发送成功手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:01:45 521 [Async-meituanTask-3] INFO  25 cn.yiidii.openapi.common.util.ServerJNotify - SCU86980T340dc43602aad5ca9bdeb5bff70577c35e59cff78a15e发送成功手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:01:45 521 [Async-meituanTask-1] INFO  25 cn.yiidii.openapi.common.util.ServerJNotify - SCU86980T340dc43602aad5ca9bdeb5bff70577c35e59cff78a15e发送成功手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:01:45 530 [Async-meituanTask-2] INFO  25 cn.yiidii.openapi.common.util.ServerJNotify - SCU86980T340dc43602aad5ca9bdeb5bff70577c35e59cff78a15e发送成功手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:01:45 538 [Async-meituanTask-5] INFO  25 cn.yiidii.openapi.common.util.ServerJNotify - SCU86980T340dc43602aad5ca9bdeb5bff70577c35e59cff78a15e发送成功手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:02:43 340 [Async-chinaUnicomTaskExcutor-2] INFO  47 cn.yiidii.openapi.unicommeituan.service.impl.MeituanServiceImpl - 当前有1个手机号
+2020-09-03 23:02:44 024 [Async-meituanTask-6] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:02:44 050 [Async-meituanTask-8] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:02:44 051 [Async-meituanTask-9] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:02:44 052 [Async-meituanTask-10] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:02:44 059 [Async-meituanTask-7] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:02:44 337 [Async-meituanTask-6] INFO  25 cn.yiidii.openapi.common.util.ServerJNotify - SCU86980T340dc43602aad5ca9bdeb5bff70577c35e59cff78a15e发送成功手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:02:44 388 [Async-meituanTask-10] INFO  25 cn.yiidii.openapi.common.util.ServerJNotify - SCU86980T340dc43602aad5ca9bdeb5bff70577c35e59cff78a15e发送成功手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:02:44 389 [Async-meituanTask-8] INFO  25 cn.yiidii.openapi.common.util.ServerJNotify - SCU86980T340dc43602aad5ca9bdeb5bff70577c35e59cff78a15e发送成功手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:02:44 391 [Async-meituanTask-9] INFO  25 cn.yiidii.openapi.common.util.ServerJNotify - SCU86980T340dc43602aad5ca9bdeb5bff70577c35e59cff78a15e发送成功手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:02:44 427 [Async-meituanTask-7] INFO  25 cn.yiidii.openapi.common.util.ServerJNotify - SCU86980T340dc43602aad5ca9bdeb5bff70577c35e59cff78a15e发送成功手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:03:00 318 [main] INFO  55 cn.yiidii.openapi.OpenapiApplication - Starting OpenapiApplication on WYD-PC with PID 2984 (C:\Users\Wang\wang\soft\ideaProject\openapi\target\classes started by Wang in C:\Users\Wang\wang\soft\ideaProject\openapi)
+2020-09-03 23:03:00 322 [main] INFO  651 cn.yiidii.openapi.OpenapiApplication - No active profile set, falling back to default profiles: default
+2020-09-03 23:03:01 601 [main] INFO  30 cn.yiidii.openapi.config.SwaggerConfig - init SwaggerConfig...
+2020-09-03 23:03:02 052 [main] INFO  173 org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-65531"]
+2020-09-03 23:03:02 053 [main] INFO  173 org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-09-03 23:03:02 054 [main] INFO  173 org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-09-03 23:03:02 188 [main] INFO  173 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/openapi/v1] - Initializing Spring embedded WebApplicationContext
+2020-09-03 23:03:03 833 [main] INFO  69 springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-09-03 23:03:04 065 [main] INFO  173 org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-65531"]
+2020-09-03 23:03:04 088 [main] INFO  160 springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-09-03 23:03:04 104 [main] INFO  163 springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-09-03 23:03:04 133 [main] INFO  41 springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-09-03 23:03:04 265 [main] INFO  61 cn.yiidii.openapi.OpenapiApplication - Started OpenapiApplication in 4.629 seconds (JVM running for 6.176)
+2020-09-03 23:03:04 500 [Async-chinaUnicomTaskExcutor-1] INFO  47 cn.yiidii.openapi.unicommeituan.service.impl.MeituanServiceImpl - 当前有1个手机号
+2020-09-03 23:03:06 038 [Async-meituanTask-2] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:03:06 043 [Async-meituanTask-3] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:03:06 044 [Async-meituanTask-1] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:03:06 054 [Async-meituanTask-4] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:03:06 122 [Async-meituanTask-5] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:03:06 444 [Async-meituanTask-4] INFO  25 cn.yiidii.openapi.common.util.ServerJNotify - SCU86980T340dc43602aad5ca9bdeb5bff70577c35e59cff78a15e发送成功手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:03:06 461 [Async-meituanTask-2] INFO  25 cn.yiidii.openapi.common.util.ServerJNotify - SCU86980T340dc43602aad5ca9bdeb5bff70577c35e59cff78a15e发送成功手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:03:06 465 [Async-meituanTask-3] INFO  25 cn.yiidii.openapi.common.util.ServerJNotify - SCU86980T340dc43602aad5ca9bdeb5bff70577c35e59cff78a15e发送成功手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:03:06 490 [Async-meituanTask-1] INFO  25 cn.yiidii.openapi.common.util.ServerJNotify - SCU86980T340dc43602aad5ca9bdeb5bff70577c35e59cff78a15e发送成功手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:03:06 502 [Async-meituanTask-5] INFO  25 cn.yiidii.openapi.common.util.ServerJNotify - SCU86980T340dc43602aad5ca9bdeb5bff70577c35e59cff78a15e发送成功手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:07:56 568 [main] INFO  55 cn.yiidii.openapi.OpenapiApplication - Starting OpenapiApplication on WYD-PC with PID 2264 (C:\Users\Wang\wang\soft\ideaProject\openapi\target\classes started by Wang in C:\Users\Wang\wang\soft\ideaProject\openapi)
+2020-09-03 23:07:56 573 [main] INFO  651 cn.yiidii.openapi.OpenapiApplication - No active profile set, falling back to default profiles: default
+2020-09-03 23:07:57 544 [main] INFO  30 cn.yiidii.openapi.config.SwaggerConfig - init SwaggerConfig...
+2020-09-03 23:07:57 925 [main] INFO  173 org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-65531"]
+2020-09-03 23:07:57 926 [main] INFO  173 org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-09-03 23:07:57 927 [main] INFO  173 org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-09-03 23:07:58 060 [main] INFO  173 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/openapi/v1] - Initializing Spring embedded WebApplicationContext
+2020-09-03 23:07:59 432 [main] INFO  69 springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-09-03 23:07:59 661 [main] INFO  173 org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-65531"]
+2020-09-03 23:07:59 682 [main] INFO  160 springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-09-03 23:07:59 698 [main] INFO  163 springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-09-03 23:07:59 728 [main] INFO  41 springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-09-03 23:07:59 866 [main] INFO  61 cn.yiidii.openapi.OpenapiApplication - Started OpenapiApplication in 3.983 seconds (JVM running for 5.328)
+2020-09-03 23:08:00 105 [Async-chinaUnicomTaskExcutor-1] INFO  47 cn.yiidii.openapi.unicommeituan.service.impl.MeituanServiceImpl - 当前有1个手机号
+2020-09-03 23:08:01 575 [Async-meituanTask-3] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:08:01 592 [Async-meituanTask-5] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:08:01 595 [Async-meituanTask-2] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:08:01 597 [Async-meituanTask-1] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:08:01 604 [Async-meituanTask-4] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:08:27 652 [main] INFO  55 cn.yiidii.openapi.OpenapiApplication - Starting OpenapiApplication on WYD-PC with PID 13768 (C:\Users\Wang\wang\soft\ideaProject\openapi\target\classes started by Wang in C:\Users\Wang\wang\soft\ideaProject\openapi)
+2020-09-03 23:08:27 655 [main] INFO  651 cn.yiidii.openapi.OpenapiApplication - No active profile set, falling back to default profiles: default
+2020-09-03 23:08:29 007 [main] INFO  30 cn.yiidii.openapi.config.SwaggerConfig - init SwaggerConfig...
+2020-09-03 23:08:29 444 [main] INFO  173 org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-65531"]
+2020-09-03 23:08:29 446 [main] INFO  173 org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-09-03 23:08:29 446 [main] INFO  173 org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-09-03 23:08:29 577 [main] INFO  173 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/openapi/v1] - Initializing Spring embedded WebApplicationContext
+2020-09-03 23:08:31 181 [main] INFO  69 springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-09-03 23:08:31 409 [main] INFO  173 org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-65531"]
+2020-09-03 23:08:31 430 [main] INFO  160 springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-09-03 23:08:31 447 [main] INFO  163 springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-09-03 23:08:31 476 [main] INFO  41 springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-09-03 23:08:31 607 [main] INFO  61 cn.yiidii.openapi.OpenapiApplication - Started OpenapiApplication in 4.653 seconds (JVM running for 5.974)
+2020-09-03 23:08:31 838 [Async-chinaUnicomTaskExcutor-1] INFO  47 cn.yiidii.openapi.unicommeituan.service.impl.MeituanServiceImpl - 当前有1个手机号
+2020-09-03 23:08:33 296 [Async-meituanTask-4] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:08:33 298 [Async-meituanTask-3] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:08:33 307 [Async-meituanTask-1] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:08:33 308 [Async-meituanTask-2] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:08:33 312 [Async-meituanTask-5] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:09:33 920 [main] INFO  55 cn.yiidii.openapi.OpenapiApplicationTests - Starting OpenapiApplicationTests on WYD-PC with PID 13128 (started by Wang in C:\Users\Wang\wang\soft\ideaProject\openapi)
+2020-09-03 23:09:33 925 [main] INFO  651 cn.yiidii.openapi.OpenapiApplicationTests - No active profile set, falling back to default profiles: default
+2020-09-03 23:09:36 911 [main] INFO  30 cn.yiidii.openapi.config.SwaggerConfig - init SwaggerConfig...
+2020-09-03 23:09:40 098 [main] INFO  69 springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-09-03 23:09:41 188 [main] INFO  160 springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-09-03 23:09:41 236 [main] INFO  163 springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-09-03 23:09:41 346 [main] INFO  41 springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-09-03 23:09:41 657 [main] INFO  61 cn.yiidii.openapi.OpenapiApplicationTests - Started OpenapiApplicationTests in 8.351 seconds (JVM running for 9.777)
+2020-09-03 23:14:40 488 [main] INFO  55 cn.yiidii.openapi.OpenapiApplicationTests - Starting OpenapiApplicationTests on WYD-PC with PID 13980 (started by Wang in C:\Users\Wang\wang\soft\ideaProject\openapi)
+2020-09-03 23:14:40 490 [main] INFO  651 cn.yiidii.openapi.OpenapiApplicationTests - No active profile set, falling back to default profiles: default
+2020-09-03 23:14:41 625 [main] INFO  30 cn.yiidii.openapi.config.SwaggerConfig - init SwaggerConfig...
+2020-09-03 23:14:44 505 [main] INFO  69 springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-09-03 23:14:45 559 [main] INFO  160 springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-09-03 23:14:45 601 [main] INFO  163 springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-09-03 23:14:45 651 [main] INFO  41 springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-09-03 23:14:45 902 [main] INFO  61 cn.yiidii.openapi.OpenapiApplicationTests - Started OpenapiApplicationTests in 5.867 seconds (JVM running for 6.862)
+2020-09-03 23:20:05 063 [main] INFO  55 cn.yiidii.openapi.OpenapiApplication - Starting OpenapiApplication on WYD-PC with PID 14556 (C:\Users\Wang\wang\soft\ideaProject\openapi\target\classes started by Wang in C:\Users\Wang\wang\soft\ideaProject\openapi)
+2020-09-03 23:20:05 067 [main] INFO  651 cn.yiidii.openapi.OpenapiApplication - No active profile set, falling back to default profiles: default
+2020-09-03 23:20:06 082 [main] INFO  30 cn.yiidii.openapi.config.SwaggerConfig - init SwaggerConfig...
+2020-09-03 23:20:06 475 [main] INFO  173 org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-65531"]
+2020-09-03 23:20:06 476 [main] INFO  173 org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-09-03 23:20:06 476 [main] INFO  173 org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-09-03 23:20:06 618 [main] INFO  173 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/openapi/v1] - Initializing Spring embedded WebApplicationContext
+2020-09-03 23:20:08 204 [main] INFO  69 springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-09-03 23:20:08 447 [main] INFO  173 org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-65531"]
+2020-09-03 23:20:08 469 [main] INFO  160 springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-09-03 23:20:08 487 [main] INFO  163 springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-09-03 23:20:08 517 [main] INFO  41 springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-09-03 23:20:08 654 [main] INFO  61 cn.yiidii.openapi.OpenapiApplication - Started OpenapiApplication in 4.298 seconds (JVM running for 5.607)
+2020-09-03 23:20:08 888 [Async-chinaUnicomTaskExcutor-1] INFO  47 cn.yiidii.openapi.unicommeituan.service.impl.MeituanServiceImpl - 当前有1个手机号
+2020-09-03 23:20:10 403 [Async-meituanTask-2] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:20:10 403 [Async-meituanTask-4] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:20:10 421 [Async-meituanTask-3] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:20:10 428 [Async-meituanTask-1] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:20:10 437 [Async-meituanTask-5] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:20:16 693 [http-nio-65531-exec-1] INFO  173 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/openapi/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-03 23:21:08 656 [Async-chinaUnicomTaskExcutor-2] INFO  47 cn.yiidii.openapi.unicommeituan.service.impl.MeituanServiceImpl - 当前有1个手机号
+2020-09-03 23:21:09 384 [Async-meituanTask-7] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:21:09 388 [Async-meituanTask-10] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:21:09 414 [Async-meituanTask-6] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:21:09 422 [Async-meituanTask-8] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:21:09 426 [Async-meituanTask-9] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:22:08 658 [Async-chinaUnicomTaskExcutor-3] INFO  47 cn.yiidii.openapi.unicommeituan.service.impl.MeituanServiceImpl - 当前有1个手机号
+2020-09-03 23:22:09 388 [Async-meituanTask-15] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:22:09 390 [Async-meituanTask-14] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:22:09 397 [Async-meituanTask-11] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:22:09 418 [Async-meituanTask-12] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:22:09 425 [Async-meituanTask-13] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:22:17 349 [main] INFO  55 cn.yiidii.openapi.OpenapiApplication - Starting OpenapiApplication on WYD-PC with PID 14312 (C:\Users\Wang\wang\soft\ideaProject\openapi\target\classes started by Wang in C:\Users\Wang\wang\soft\ideaProject\openapi)
+2020-09-03 23:22:17 363 [main] INFO  651 cn.yiidii.openapi.OpenapiApplication - No active profile set, falling back to default profiles: default
+2020-09-03 23:22:18 488 [main] INFO  30 cn.yiidii.openapi.config.SwaggerConfig - init SwaggerConfig...
+2020-09-03 23:22:18 915 [main] INFO  173 org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-65531"]
+2020-09-03 23:22:18 916 [main] INFO  173 org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-09-03 23:22:18 917 [main] INFO  173 org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-09-03 23:22:19 062 [main] INFO  173 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/openapi/v1] - Initializing Spring embedded WebApplicationContext
+2020-09-03 23:22:20 412 [main] INFO  69 springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-09-03 23:22:20 641 [main] INFO  173 org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-65531"]
+2020-09-03 23:22:20 661 [main] INFO  160 springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-09-03 23:22:20 685 [main] INFO  163 springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-09-03 23:22:20 714 [main] INFO  41 springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-09-03 23:22:20 842 [main] INFO  61 cn.yiidii.openapi.OpenapiApplication - Started OpenapiApplication in 4.065 seconds (JVM running for 5.347)
+2020-09-03 23:22:21 067 [Async-chinaUnicomTaskExcutor-1] INFO  47 cn.yiidii.openapi.unicommeituan.service.impl.MeituanServiceImpl - 当前有1个手机号
+2020-09-03 23:22:22 575 [Async-meituanTask-4] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃飞”500元机票代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:22:22 575 [Async-meituanTask-2] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满10减10满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:22:22 582 [Async-meituanTask-5] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:沃旅行-“任沃住”500元酒店代金券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:22:22 598 [Async-meituanTask-3] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满5减5满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:22:22 609 [Async-meituanTask-1] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:15600015800,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:22:25 766 [http-nio-65531-exec-1] INFO  173 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/openapi/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-03 23:22:26 606 [Async-meituanTask-6] INFO  46 cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy - 手机号:13075097803,商品:美团外卖满30减30满减券 下单结果:[code: 1, msg: 商品已抢购完，您下次早点来哦~]
+2020-09-03 23:22:54 583 [main] INFO  55 cn.yiidii.openapi.OpenapiApplicationTests - Starting OpenapiApplicationTests on WYD-PC with PID 5776 (started by Wang in C:\Users\Wang\wang\soft\ideaProject\openapi)
+2020-09-03 23:22:54 591 [main] INFO  651 cn.yiidii.openapi.OpenapiApplicationTests - No active profile set, falling back to default profiles: default
+2020-09-03 23:22:56 347 [main] INFO  30 cn.yiidii.openapi.config.SwaggerConfig - init SwaggerConfig...
+2020-09-03 23:22:59 543 [main] INFO  69 springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-09-03 23:23:00 678 [main] INFO  160 springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-09-03 23:23:00 717 [main] INFO  163 springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-09-03 23:23:00 781 [main] INFO  41 springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-09-03 23:23:01 094 [main] INFO  61 cn.yiidii.openapi.OpenapiApplicationTests - Started OpenapiApplicationTests in 7.335 seconds (JVM running for 8.688)
