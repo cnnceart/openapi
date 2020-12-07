@@ -9,6 +9,7 @@ import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 
 import org.apache.commons.codec.binary.Base64;
+import org.apache.commons.codec.binary.StringUtils;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
 /**
@@ -25,15 +26,19 @@ public class AESUtil {
     public static boolean initialized = false;
 
     public static void main(String[] args) {
-        byte[] org = "Q8MKv1IJQl2Eau7/nksyJtQ4qI8/cmVyzEcgA3DA6LOT+CVY+6GQQ/QZZvNOipBc1WbSueLBM2rCwXnl1WLJU1NJu5F7DexEmP6Ao0qPxkd2z3Am/yJ5gN/XszD5gKfZmDolM3Lt2vjbehZNCmiGSw==".getBytes();
-        byte[] eKey = AESUtil.parseHexStr2Byte("00000000000000000000000000000000");
-        byte[] iv = "pk];pk,o876nkwdd".getBytes();
-        System.out.println("org: " + new String(org));
-        System.out.println("iv: " + new String(iv));
+//        byte[] org = "Q8MKv1IJQl2Eau7/nksyJtQ4qI8/cmVyzEcgA3DA6LOT+CVY+6GQQ/QZZvNOipBc1WbSueLBM2rCwXnl1WLJU1NJu5F7DexEmP6Ao0qPxkd2z3Am/yJ5gN/XszD5gKfZmDolM3Lt2vjbehZNCmiGSw==".getBytes();
+//        byte[] eKey = AESUtil.parseHexStr2Byte("00000000000000000000000000000000");
+//        byte[] iv = "pk];pk,o876nkwdd".getBytes();
+//        System.out.println("org: " + new String(org));
+//        System.out.println("iv: " + new String(iv));
+//
+//        org = Base64.decodeBase64(org);
+//        String addr = new String(new AESUtil().decrypt(org, eKey, iv));
+//        System.out.println("addr: " + addr);
 
-        org = Base64.decodeBase64(org);
-        String addr = new String(new AESUtil().decrypt(org, eKey, iv));
-        System.out.println("addr: " + addr);
+        String addr = "rtmp://pull.yk-1.com/live/s1064433303_2f92b8f902?txSecret=5e1daae26e9f9d553e9f503120c4ad00&txTime=5f581b40";
+        String txTime = addr.substring(addr.lastIndexOf("=") + 1);
+        System.out.println(txTime);
     }
 
     public static byte[] encrypt(byte[] originalContent, byte[] encryptKey, byte[] ivByte) {

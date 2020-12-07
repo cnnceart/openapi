@@ -1,6 +1,6 @@
 package cn.yiidii.openapi.unicommeituan.service;
 
-import cn.yiidii.openapi.entity.ChinaUnicomInfo;
+import cn.yiidii.openapi.entity.uincommeituan.ChinaUnicomInfo;
 import cn.yiidii.openapi.unicommeituan.controller.form.ChinaUnicomInfoFrom;
 import cn.yiidii.openapi.unicommeituan.dto.MeiTuanGoods;
 

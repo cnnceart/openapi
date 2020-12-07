@@ -1,30 +1,20 @@
 package cn.yiidii.openapi.unicommeituan.service.impl;
 
 import cn.yiidii.openapi.base.exception.ServiceException;
-import cn.yiidii.openapi.common.util.HttpClientUtil;
-import cn.yiidii.openapi.common.util.dto.HttpClientResult;
-import cn.yiidii.openapi.entity.ChinaUnicomInfo;
+import cn.yiidii.openapi.entity.uincommeituan.ChinaUnicomInfo;
 import cn.yiidii.openapi.unicommeituan.controller.form.ChinaUnicomInfoFrom;
-import cn.yiidii.openapi.unicommeituan.dto.MeiTuanGoods;
 import cn.yiidii.openapi.unicommeituan.mapper.ChinaUnicomInfoMapper;
-import cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy;
 import cn.yiidii.openapi.unicommeituan.service.ChinaUnicomInfoService;
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.scheduling.annotation.Async;
-import org.springframework.scheduling.annotation.Scheduled;
-import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
-import java.lang.reflect.InvocationTargetException;
-import java.util.*;
+import java.util.List;
+import java.util.Objects;
 
 @Service
 @Slf4j
@@ -40,7 +30,6 @@ public class ChinaUnicomInfoServiceImpl implements ChinaUnicomInfoService {
 
     @Override
     public ChinaUnicomInfo getChinaUnicomById(Integer id) throws ServiceException {
-//        chinaUnicomInfoMapper.selectOne(new QueryWrapper<ChinaUnicomInfo>().eq("id", id));
         ChinaUnicomInfo chinaUnicomInfo = chinaUnicomInfoMapper.selectById(id);
         if (Objects.isNull(chinaUnicomInfo)) {
             throw new ServiceException("账号不存在");

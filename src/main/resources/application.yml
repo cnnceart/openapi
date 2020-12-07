@@ -1,7 +1,16 @@
+#http:
+#  server:
+#    port: 65531 #65531自动跳转8443
+
 server:
+#  port: 8443
   port: 65531
   servlet:
-    context-path: /openapi/v1
+    context-path: /
+#  ssl:
+#    key-store: classpath:cert/demo.keystore
+#    key-store-password: 12345678
+#    key-alias: openapi-tomcat
 
 # logback 配置
 logging:
@@ -16,11 +25,24 @@ logging:
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    password: 114130
-    url: jdbc:mysql://localhost:3306/openapi?useUnicode=true&characterEncoding=UTF-8
+    url: jdbc:mysql://yiidii.cn:3306/openapi?useUnicode=true&characterEncoding=UTF-8
+    password: Wed114130
+#    password: 114130
     username: root
 
 #mybatis
 mybatis-plus:
   mapper-locations: classpath*:/mapper/**/*.xml
+  global-config:
+    db-config:
+      id-type: UUID
+
+
+justauth:
+  enabled: true
+  type:
+    github:
+      client-id: 4417952588fc4ba8b9d6
+      client-secret: 81220cef45c226c02697d07b7ebb6638c552a01e
+      redirect-uri: http://127.0.0.1:65531/oauth/callback
 

@@ -54,10 +54,10 @@ public class GlobalResponseBodyAdvice implements ResponseBodyAdvice {
             return obj;
         }
 
-        return getWrapperResponse(request, obj);
+        return getWrapperResponse(obj);
     }
 
-    private Result getWrapperResponse(ServerHttpRequest request, Object data) {
-        return Result.success(data);
+    private Result getWrapperResponse(Object data) {
+        return Result.success(data, "操作成功");
     }
 }

@@ -1,8 +1,9 @@
 package cn.yiidii.openapi.unicommeituan.service.impl;
 
+import cn.yiidii.openapi.base.Constant;
 import cn.yiidii.openapi.common.util.HttpClientUtil;
 import cn.yiidii.openapi.common.util.dto.HttpClientResult;
-import cn.yiidii.openapi.entity.ChinaUnicomInfo;
+import cn.yiidii.openapi.entity.uincommeituan.ChinaUnicomInfo;
 import cn.yiidii.openapi.unicommeituan.controller.form.ChinaUnicomInfoFrom;
 import cn.yiidii.openapi.unicommeituan.dto.MeiTuanGoods;
 import cn.yiidii.openapi.unicommeituan.meituan.MeituanTaskProxy;
@@ -11,6 +12,7 @@ import cn.yiidii.openapi.unicommeituan.service.MeituanService;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
@@ -34,15 +36,17 @@ public class MeituanServiceImpl implements MeituanService {
      * 美团下单线程池
      */
     @Autowired
-    @Resource(name = "meituanTaskExcutor")
-    private ThreadPoolTaskExecutor meituanTaskExcutor;
+    @Resource(name = "meituanTaskExecutor")
+    private ThreadPoolTaskExecutor meituanTaskExecutor;
 
-    @Async("chinaUnicomTaskExcutor")
-    @Scheduled(fixedDelay = 300)
-//    @Scheduled(fixedDelay = 60000)
+    /**
+     * 异步执行抢券
+     */
+//    @Async("scheduleTaskExecutor")
+//    @Scheduled(fixedDelay = 300)
+//    @Scheduled(fixedDelay = 100)
     public void robTicket() {
         List<ChinaUnicomInfo> allInfo = chinaUnicomInfoService.getAllChinaUnicom();
-        log.info("当前有{}个手机号", allInfo.size());
         if (Objects.isNull(allInfo) || allInfo.size() <= 0) {
             return;
         }
@@ -51,19 +55,16 @@ public class MeituanServiceImpl implements MeituanService {
             try {
                 goodsList = getGoodsList(chinaUnicomInfo);
             } catch (Exception e) {
+                return;
             }
             if (Objects.isNull(goodsList) || goodsList.size() == 0) {
-                log.info("{} 获取商品失败, 删除之", chinaUnicomInfo.getPhoneNum());
-//                chinaUnicomInfoService.delChinaUnicomInfoByPhoneNum(chinaUnicomInfo.getPhoneNum());
                 return;
             }
             goodsList.forEach(singleGoods -> {
                 try {
                     MeituanTaskProxy proxy = new MeituanTaskProxy(chinaUnicomInfo, singleGoods);
-                    meituanTaskExcutor.submit(proxy);
+                    meituanTaskExecutor.submit(proxy);
                 } catch (Exception e) {
-                    log.info("提交订单发生异常, 删除之: {}", e.toString());
-//                    chinaUnicomInfoService.delChinaUnicomInfoByPhoneNum(chinaUnicomInfo.getPhoneNum());
                 }
             });
 
@@ -86,7 +87,7 @@ public class MeituanServiceImpl implements MeituanService {
         MeiTuanGoods meiTuanGoods = goodsList.get(0);
         try {
             MeituanTaskProxy proxy = new MeituanTaskProxy(chinaUnicomInfo, meiTuanGoods);
-            Future<Object> future = meituanTaskExcutor.submit(proxy);
+            Future<Object> future = meituanTaskExecutor.submit(proxy);
             Object o = future.get(1500, TimeUnit.MILLISECONDS);
             return o.toString();
         } catch (Exception e) {
@@ -100,7 +101,7 @@ public class MeituanServiceImpl implements MeituanService {
         String url = "https://m.client.10010.com/welfare-mall-front-activity/mobile/activity/get619Activity/v1?whetherFriday=YES&from=955000006";
         Map<String, String> headers = new HashMap<>(2);
         headers.put("Cookie", chinaUnicomInfo.getCookie());
-        headers.put("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.92 Safari/537.36");
+        headers.put("User-Agent", Constant.USER_AGENT);
         HttpClientResult httpClientResult = new HttpClientUtil().doGet(url, headers, null);
         if (httpClientResult.getCode() == 200) {
             JSONObject respJo = JSONObject.parseObject(httpClientResult.getContent());
@@ -110,7 +111,11 @@ public class MeituanServiceImpl implements MeituanService {
             goodsListJa.forEach(obj -> {
                 JSONObject jo = (JSONObject) obj;
                 MeiTuanGoods info = new MeiTuanGoods();
-                info.setGoodsName(jo.getString("gOODS_NAME"));
+                String goodsName = jo.getString("gOODS_NAME");
+                if (!StringUtils.contains(goodsName, "10")) {
+                    return;
+                }
+                info.setGoodsName(goodsName);
                 info.setLinkUrl(jo.getString("lINKURL"));
                 String goodsSkuId = jo.getString("gOODS_SKU_ID");
                 info.setGoodsSkuId(goodsSkuId);
@@ -119,14 +124,18 @@ public class MeituanServiceImpl implements MeituanService {
                 info.setEndTime(jo.getLong("endTime"));
                 info.setState(jo.getInteger("state"));
                 try {
-                    info.setCurrSalePrice(getCurrSalePrice(chinaUnicomInfo, goodsSkuId));
+                    double currSalePrice = getCurrSalePrice(chinaUnicomInfo, goodsSkuId);
+                    if (currSalePrice <= 0) {
+                        return;
+                    }
+                    info.setCurrSalePrice(currSalePrice);
                 } catch (Exception e) {
+                    return;
                 }
                 goodsList.add(info);
             });
             return goodsList;
         } else {
-            log.info("{}获取商品失败，响应:{}", chinaUnicomInfo.getPhoneNum(), JSONObject.toJSONString(httpClientResult));
             return null;
         }
     }
@@ -136,7 +145,7 @@ public class MeituanServiceImpl implements MeituanService {
         String url = "https://m.client.10010.com/welfare-mall-front-activity/mobile/activity/getGoodsTradePrice/v2";
         Map<String, String> headers = new HashMap<>(2);
         headers.put("Cookie", chinaUnicomInfo.getCookie());
-        headers.put("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.92 Safari/537.36");
+        headers.put("User-Agent", Constant.USER_AGENT);
         HttpClientResult httpClientResult = new HttpClientUtil().doGet(url, headers, null);
         if (httpClientResult.getCode() == 200) {
             JSONObject respJo = JSONObject.parseObject(httpClientResult.getContent());
@@ -144,7 +153,6 @@ public class MeituanServiceImpl implements MeituanService {
             double currSalePrice = resdata.getDouble(goodsSkuId);
             return currSalePrice;
         } else {
-            System.out.println(String.format("%s获取商品失败，响应:%s", chinaUnicomInfo.getPhoneNum(), JSONObject.toJSONString(httpClientResult)));
             return 0D;
         }
     }

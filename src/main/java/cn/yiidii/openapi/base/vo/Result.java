@@ -24,6 +24,13 @@ public class Result<T> {
         return response;
     }
 
+    public static <T> Result<T> success(T data, String msg) {
+        Result<T> response = new Result<>();
+        response.message = msg;
+        response.data = data;
+        return response;
+    }
+
     public static <T> Result<T> success() {
         return new Result<>();
     }

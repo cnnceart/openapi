@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="cn.yiidii.openapi.xjj.mapper.CdkMapper">
+
+    <resultMap type="cn.yiidii.openapi.entity.xjj.Cdk" id="cdkResultMap">
+        <result column="id" property="id" jdbcType="VARCHAR"/>
+        <result column="cdk" property="cdk" jdbcType="VARCHAR"/>
+        <result column="remark" property="count" jdbcType="VARCHAR"/>
+        <result column="create_time" property="createTime" jdbcType="DATE"/>
+        <result column="expire_time" property="expireTime" jdbcType="DATE"/>
+    </resultMap>
+
+    <!-- 基础查询列 -->
+    <sql id="baseColumns">
+         id, cdk, remark, create_time, expire_time
+    </sql>
+
+    <select id="selectRedundantCdk" resultType="java.util.List" resultMap="cdkResultMap">
+        SELECT
+        <include refid="baseColumns"/>
+        FROM cdk WHERE cdk.create_time = cdk.expire_time;
+    </select>
+
+</mapper>
+

@@ -1,24 +1,31 @@
 package cn.yiidii.openapi.common.util;
 
 import cn.yiidii.openapi.common.util.dto.HttpClientResult;
+import com.alibaba.fastjson.JSONObject;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.http.HttpStatus;
 import org.apache.http.NameValuePair;
+import org.apache.http.client.CookieStore;
 import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.*;
 import org.apache.http.client.utils.URIBuilder;
+import org.apache.http.cookie.Cookie;
 import org.apache.http.entity.ContentType;
 import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.BasicCookieStore;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 import org.springframework.stereotype.Component;
+import org.springframework.util.CollectionUtils;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.*;
 import java.util.Map.Entry;
+import java.util.stream.Collectors;
 
 /**
  * httpClient工具类
@@ -66,7 +73,8 @@ public class HttpClientUtil {
      */
     public HttpClientResult doGet(String url, Map<String, String> headers, Map<String, String> params) throws Exception {
         // 创建httpClient对象
-        CloseableHttpClient httpClient = HttpClients.createDefault();
+        CookieStore cookieStore = new BasicCookieStore();
+        CloseableHttpClient httpClient = HttpClients.custom().setDefaultCookieStore(cookieStore).build();
 
         // 创建访问的地址
         URIBuilder uriBuilder = new URIBuilder(url);
@@ -95,7 +103,7 @@ public class HttpClientUtil {
 
         try {
             // 执行请求并获得响应结果
-            return getHttpClientResult(httpResponse, httpClient, httpGet);
+            return getHttpClientResult(httpResponse, httpClient, httpGet, cookieStore);
         } finally {
             // 释放资源
             release(httpResponse, httpClient);
@@ -127,19 +135,17 @@ public class HttpClientUtil {
     /**
      * post请求，json格式的参数
      *
-     * @param url
-     *            请求地址
-     * @param header
-     *            请求头
-     * @param jsonParam
-     *            json格式的请求参数
+     * @param url       请求地址
+     * @param header    请求头
+     * @param jsonParam json格式的请求参数
      * @return
      * @throws Exception
      */
     public static HttpClientResult doJsonPost(String url,
                                               Map<String, String> header, String jsonParam) throws Exception {
         HttpPost httpPost = new HttpPost(url);
-        CloseableHttpClient httpClient = HttpClients.createDefault();
+        CookieStore cookieStore = new BasicCookieStore();
+        CloseableHttpClient httpClient = HttpClients.custom().setDefaultCookieStore(cookieStore).build();
         // 请求头
         packageHeader(header, httpPost);
         //
@@ -152,7 +158,7 @@ public class HttpClientUtil {
 
         try {
             // 执行请求并获得响应结果
-            return getHttpClientResult(httpResponse, httpClient, httpPost);
+            return getHttpClientResult(httpResponse, httpClient, httpPost, cookieStore);
         } finally {
             // 释放资源
             release(httpResponse, httpClient);
@@ -163,32 +169,28 @@ public class HttpClientUtil {
     /**
      * post请求，form-data格式参数
      *
-     * @param url
-     *            请求地址
-     * @param header
-     *            请求头
-     * @param formParam
-     *            form-data格式的请求参数
+     * @param url    请求地址
+     * @param header 请求头
+     * @param param  form-data格式的请求参数
      * @return
      * @throws Exception
      */
     public HttpClientResult doFormDataPost(String url,
-                                                  Map<String, String> header, String formParam) throws Exception {
+                                           Map<String, String> header,
+                                           Map<String, String> param) throws Exception {
         HttpPost httpPost = new HttpPost(url);
-        CloseableHttpClient httpClient = HttpClients.createDefault();
+        CookieStore cookieStore = new BasicCookieStore();
+        CloseableHttpClient httpClient = HttpClients.custom().setDefaultCookieStore(cookieStore).build();
         // 设置请求头
         packageHeader(header, httpPost);
 
-        StringEntity entity = new StringEntity(formParam.toString(), "utf-8");// 解决中文乱码问题
-        entity.setContentEncoding("UTF-8");
-        entity.setContentType(ContentType.MULTIPART_FORM_DATA.getMimeType());
-        httpPost.setEntity(entity);
+        packageParam(param, httpPost);
 
         CloseableHttpResponse httpResponse = null;
 
         try {
             // 执行请求并获得响应结果
-            return getHttpClientResult(httpResponse, httpClient, httpPost);
+            return getHttpClientResult(httpResponse, httpClient, httpPost, cookieStore);
         } finally {
             // 释放资源
             release(httpResponse, httpClient);
@@ -199,17 +201,15 @@ public class HttpClientUtil {
     /**
      * post请求，x-www-form-urlencode格式参数
      *
-     * @param url
-     *            请求地址
-     * @param headers
-     *            请求头
-     * @param params
-     *            请求参数
+     * @param url     请求地址
+     * @param headers 请求头
+     * @param params  请求参数
      * @return
      * @throws Exception
      */
     public HttpClientResult doWWWFormUrlencodePost(String url,
-                                                          Map<String, String> headers, Map<String, String> params)
+                                                   Map<String, String> headers,
+                                                   Map<String, String> params)
             throws Exception {
         return doPost(url, headers, params);
     }
@@ -225,8 +225,8 @@ public class HttpClientUtil {
      */
     public HttpClientResult doPost(String url, Map<String, String> headers, Map<String, String> params) throws Exception {
         // 创建httpClient对象
-        CloseableHttpClient httpClient = HttpClients.createDefault();
-
+        CookieStore cookieStore = new BasicCookieStore();
+        CloseableHttpClient httpClient = HttpClients.custom().setDefaultCookieStore(cookieStore).build();
         // 创建http对象
         HttpPost httpPost = new HttpPost(url);
         /**
@@ -245,7 +245,7 @@ public class HttpClientUtil {
         CloseableHttpResponse httpResponse = null;
         try {
             // 执行请求并获得响应结果
-            return getHttpClientResult(httpResponse, httpClient, httpPost);
+            return getHttpClientResult(httpResponse, httpClient, httpPost, cookieStore);
         } finally {
             // 释放资源
             release(httpResponse, httpClient);
@@ -268,7 +268,8 @@ public class HttpClientUtil {
      * @throws Exception
      */
     public HttpClientResult doPut(String url, Map<String, String> params) throws Exception {
-        CloseableHttpClient httpClient = HttpClients.createDefault();
+        CookieStore cookieStore = new BasicCookieStore();
+        CloseableHttpClient httpClient = HttpClients.custom().setDefaultCookieStore(cookieStore).build();
         HttpPut httpPut = new HttpPut(url);
         RequestConfig requestConfig = RequestConfig.custom().setConnectTimeout(CONNECT_TIMEOUT).setSocketTimeout(SOCKET_TIMEOUT).build();
         httpPut.setConfig(requestConfig);
@@ -278,7 +279,7 @@ public class HttpClientUtil {
         CloseableHttpResponse httpResponse = null;
 
         try {
-            return getHttpClientResult(httpResponse, httpClient, httpPut);
+            return getHttpClientResult(httpResponse, httpClient, httpPut, cookieStore);
         } finally {
             release(httpResponse, httpClient);
         }
@@ -288,14 +289,15 @@ public class HttpClientUtil {
      * 发送delete请求；不带请求参数
      */
     public HttpClientResult doDelete(String url) throws Exception {
-        CloseableHttpClient httpClient = HttpClients.createDefault();
+        CookieStore cookieStore = new BasicCookieStore();
+        CloseableHttpClient httpClient = HttpClients.custom().setDefaultCookieStore(cookieStore).build();
         HttpDelete httpDelete = new HttpDelete(url);
         RequestConfig requestConfig = RequestConfig.custom().setConnectTimeout(CONNECT_TIMEOUT).setSocketTimeout(SOCKET_TIMEOUT).build();
         httpDelete.setConfig(requestConfig);
 
         CloseableHttpResponse httpResponse = null;
         try {
-            return getHttpClientResult(httpResponse, httpClient, httpDelete);
+            return getHttpClientResult(httpResponse, httpClient, httpDelete, cookieStore);
         } finally {
             release(httpResponse, httpClient);
         }
@@ -367,7 +369,9 @@ public class HttpClientUtil {
      * @throws Exception
      */
     private static HttpClientResult getHttpClientResult(CloseableHttpResponse httpResponse,
-                                                        CloseableHttpClient httpClient, HttpRequestBase httpMethod) throws Exception {
+                                                        CloseableHttpClient httpClient,
+                                                        HttpRequestBase httpMethod,
+                                                        CookieStore cookieStore) throws Exception {
         // 执行请求
         httpResponse = httpClient.execute(httpMethod);
 
@@ -377,9 +381,28 @@ public class HttpClientUtil {
             if (httpResponse.getEntity() != null) {
                 content = EntityUtils.toString(httpResponse.getEntity(), ENCODING);
             }
-            return new HttpClientResult(httpResponse.getStatusLine().getStatusCode(), content);
+            List<Cookie> cookies = cookieStore.getCookies();
+            return new HttpClientResult(httpResponse.getStatusLine().getStatusCode(), content, packageCookieStr(cookies), packageCookieMap(cookies));
         }
         return HttpClientResult.builder().code(HttpStatus.SC_INTERNAL_SERVER_ERROR).build();
+    }
+
+    private static String packageCookieStr(List<Cookie> cookiesList) {
+        if (CollectionUtils.isEmpty(cookiesList)) {
+            return "";
+        }
+        List<String> cookieKvList = new ArrayList<>();
+        cookiesList.forEach(cookie -> {
+            cookieKvList.add(cookie.getName() + "=" + cookie.getValue());
+        });
+        return StringUtils.join(cookieKvList, ";");
+    }
+
+    private static Map<String, String> packageCookieMap(List<Cookie> cookiesList) {
+        if (CollectionUtils.isEmpty(cookiesList)) {
+            return null;
+        }
+        return cookiesList.stream().collect(Collectors.toMap(Cookie::getName, Cookie::getValue, (k1, k2) -> k2));
     }
 
     /**

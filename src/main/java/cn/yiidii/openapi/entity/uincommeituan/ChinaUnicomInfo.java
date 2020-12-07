@@ -1,4 +1,4 @@
-package cn.yiidii.openapi.entity;
+package cn.yiidii.openapi.entity.uincommeituan;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;

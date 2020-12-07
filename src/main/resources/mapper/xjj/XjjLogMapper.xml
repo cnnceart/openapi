@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="cn.yiidii.openapi.xjj.mapper.XjjLogMapper">
+
+    <resultMap type="cn.yiidii.openapi.entity.xjj.XjjUsageData" id="XjjUsageDataResultMap">
+        <result column="hour" property="hour" jdbcType="INTEGER"/>
+        <result column="count" property="count" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <!-- 基础查询列 -->
+    <sql id="baseColumns">
+         hour, count
+    </sql>
+
+    <!-- 查询，单实体/List通用 -->
+    <select id="getXjjUsage" resultMap="XjjUsageDataResultMap">
+        SELECT
+			timetable.HOUR HOUR,
+			ifnull( sumtable.count, 0 ) Count
+		FROM
+			(
+			SELECT
+				0 HOUR UNION ALL
+			SELECT
+				1 HOUR UNION ALL
+			SELECT
+				2 HOUR UNION ALL
+			SELECT
+				3 HOUR UNION ALL
+			SELECT
+				4 HOUR UNION ALL
+			SELECT
+				5 HOUR UNION ALL
+			SELECT
+				6 HOUR UNION ALL
+			SELECT
+				7 HOUR UNION ALL
+			SELECT
+				8 HOUR UNION ALL
+			SELECT
+				9 HOUR UNION ALL
+			SELECT
+				10 HOUR UNION ALL
+			SELECT
+				11 HOUR UNION ALL
+			SELECT
+				12 HOUR UNION ALL
+			SELECT
+				13 HOUR UNION ALL
+			SELECT
+				14 HOUR UNION ALL
+			SELECT
+				15 HOUR UNION ALL
+			SELECT
+				16 HOUR UNION ALL
+			SELECT
+				17 HOUR UNION ALL
+			SELECT
+				18 HOUR UNION ALL
+			SELECT
+				19 HOUR UNION ALL
+			SELECT
+				20 HOUR UNION ALL
+			SELECT
+				21 HOUR UNION ALL
+			SELECT
+				22 HOUR UNION ALL
+			SELECT
+				23 HOUR
+			) timetable
+			LEFT JOIN (
+			SELECT HOUR
+				( log.request_time ) HOUR,
+				count( 1 ) count
+			FROM
+				xjj_log log
+			WHERE
+				cdk=#{cdk}
+			GROUP BY
+				HOUR
+			) sumtable ON timetable.HOUR = sumtable.HOUR
+		ORDER BY
+			HOUR
+    </select>
+
+</mapper>
+
