@@ -56,7 +56,6 @@ public class AESUtil {
 
     /**
      * AES解密 填充模式AES/CBC/PKCS7Padding 解密模式128
-     *
      */
     public static byte[] decrypt(byte[] content, byte[] aesKey, byte[] ivByte) {
         initialize();
@@ -64,6 +63,19 @@ public class AESUtil {
             Cipher cipher = Cipher.getInstance("AES/CBC/PKCS7Padding");
             Key sKeySpec = new SecretKeySpec(aesKey, "AES");
             cipher.init(Cipher.DECRYPT_MODE, sKeySpec, generateIV(ivByte));// 初始化
+            byte[] result = cipher.doFinal(content);
+            return result;
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static byte[] decryptEcb(byte[] content, byte[] aesKey) {
+        initialize();
+        try {
+            Cipher cipher = Cipher.getInstance("AES/ECB/PKCS7Padding");
+            Key sKeySpec = new SecretKeySpec(aesKey, "AES");
+            cipher.init(Cipher.DECRYPT_MODE, sKeySpec);// 初始化
             byte[] result = cipher.doFinal(content);
             return result;
         } catch (Exception e) {

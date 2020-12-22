@@ -32,6 +32,7 @@ public class ChinaUnicomController {
 
     @GetMapping("sendRandomNum")
     public Result sendRandomNum(@RequestParam(required = false) @NotBlank(message = "请输入手机号码") @Pattern(regexp = "\\d{11,}", message = "手机号格式不正确") String mobile) {
+        System.out.println("-11-");
         return Result.success(null, chinaUnicomService.sendRandomNum(mobile));
     }
 

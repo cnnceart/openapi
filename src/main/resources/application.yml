@@ -29,6 +29,9 @@ spring:
     password: Wed114130
 #    password: 114130
     username: root
+  devtools:
+    restart:
+      enabled: true
 
 #mybatis
 mybatis-plus:

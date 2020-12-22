@@ -182,7 +182,6 @@ public class ChinaUnicomServiceImpl implements ChinaUnicomService {
         }
         String rspCode = loginRespJo.getString("code");
         String rspDesc = loginRespJo.getString("dsc");
-        log.info("{}登陆响应: {}", mobile, loginRespJo);
         if (StringUtils.equals(rspCode, "7")) {
             // 需要手动输入图片验证码
             return Result.success(loginRespJo, "请输入图片验证码");
