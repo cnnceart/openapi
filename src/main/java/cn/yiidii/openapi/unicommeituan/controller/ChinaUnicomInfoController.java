@@ -5,7 +5,7 @@ import cn.yiidii.openapi.unicommeituan.service.ChinaUnicomInfoService;
 import cn.yiidii.openapi.unicommeituan.service.MeituanService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import springfox.documentation.annotations.ApiIgnore;
@@ -17,13 +17,11 @@ import javax.validation.constraints.NotNull;
 @RequestMapping("/ChinaUnicomInfo")
 @Api(tags = "中国联通星期五")
 @Validated
+@RequiredArgsConstructor
 public class ChinaUnicomInfoController {
 
-    @Autowired
-    private ChinaUnicomInfoService chinaUnicomInfoService;
-
-    @Autowired
-    private MeituanService meituanService;
+    private final ChinaUnicomInfoService chinaUnicomInfoService;
+    private final MeituanService meituanService;
 
     @GetMapping("/all")
     @ApiIgnore

@@ -14,6 +14,7 @@ import cn.yiidii.openapi.unicommeituan.service.ChinaUnicomService;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import lombok.extern.slf4j.Slf4j;
+import lombok.RequiredArgsConstructor;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -33,13 +34,14 @@ import java.util.Map;
  */
 @Service
 @Slf4j
+@RequiredArgsConstructor
 public class ChinaUnicomServiceImpl implements ChinaUnicomService {
 
-    @Autowired
-    private IPUtil ipUtil;
+    private final IPUtil ipUtil;
 
-    @Autowired
-    private HttpServletRequest request;
+    private final HttpServletRequest request;
+
+    private final HttpClientUtil httpClientUtil;
 
     private static final String DONT_TIP = "DONT_TIP";
 
@@ -65,8 +67,6 @@ public class ChinaUnicomServiceImpl implements ChinaUnicomService {
      */
     private static final String URL_QUERY_USER_INFO = "https://m.client.10010.com/mobileservicequery/operationservice/getUserinfo";
 
-    @Autowired
-    private HttpClientUtil httpClientUtil;
 
     @Override
     public String sendRandomNum(String mobile) throws ServiceException {
@@ -195,13 +195,6 @@ public class ChinaUnicomServiceImpl implements ChinaUnicomService {
         resultJo.put("cookieMap", loginResp.getCookieMap());
         this.printLog(mobile, "成功获取了联通Cookie");
         return Result.success(resultJo, "登陆成功");
-    }
-
-    public static void main(String[] args) {
-        TelecomForm telecomForm = new TelecomForm();
-        telecomForm.setMobile("15600015800");
-        telecomForm.setCookie("on_info=b7ebdc40ed1791ad2f844a90b2dc06c5; u_type=11; mobileServiceAll=728a8c6bd28a4230ddb4b8c3e1caec08; route=751df16222283a79398e5c964ba647a1; mobileService1=zaYZNeu_sQP075PdUpKgATXLsLz8j-v0SwKxdObrKR6b9aGD5NO_!-1383246902; a_token=eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MDczNDgzODYsInRva2VuIjp7ImxvZ2luVXNlciI6IjE1NjAwMDE1ODAwIiwicmFuZG9tU3RyIjoieWg0MGE5NWMxNjA2NzQzNTg2In0sImlhdCI6MTYwNjc0MzU4Nn0.GooMZh8tFsuT_0DeW62TjhMtYFn23-AcuslhexTQy3aYZqs8-5Wx4ExGUNrp0NXTRKpTki-miA63WoTYfIZT3w; c_id=7634d33a3ca6ce48a2f1128abb3a6397b9acafaddf9b8d45713a9325e841c793; login_type=06; login_type=06; u_account=15600015800; city=011|110|90356344|-99; c_version=android@7.0601; c_version=android@7.0601; d_deviceCode=7865969553f94e9c9fe6654e89cbefc0; enc_acc=sQfiZ/aNK1U/688zYkP5aSRilTA420WsBgD2JyBd7/n1cTFUqtt1Bs9QrUeykPtA9KRPZ9f6PWqs7wl0h5Q8yc8cPvvT9yY21eYVcG644+oBMJDFlNxWHygyCGTgZdqEGG2FE6YHLM+HBO5C7e/+mGaSxXbRi9lh2SYI50pSosM=; ecs_acc=sQfiZ/aNK1U/688zYkP5aSRilTA420WsBgD2JyBd7/n1cTFUqtt1Bs9QrUeykPtA9KRPZ9f6PWqs7wl0h5Q8yc8cPvvT9yY21eYVcG644+oBMJDFlNxWHygyCGTgZdqEGG2FE6YHLM+HBO5C7e/+mGaSxXbRi9lh2SYI50pSosM=; random_login=0; cw_mutual=6ff66a046d4cb9a67af6f2af5f74c321e5880d9521ce1cc40788c83d49f7f83ab3a3319edad000874a7032c84921f4bbc54a6fb938fa52a78d8c60cae61c54f6; t3_token=236f5181f6ae76552ee98f377e7e8fbf; invalid_at=d0f43d8c110c2a5db929ac6c669d9c69892e878629499bf8ba97e53f0856b416; c_mobile=15600015800; wo_family=0; u_areaCode=110; third_token=eyJkYXRhIjoiMTMyYzJlNGFmOTFiOWU0ZTRmMmMyMDQwOWVkNWU5NDJjNmY3YjRkOTk2Njk1YzdmMDE4ZTcwNDM1OTg1ZDg3OTk3MTI1YWRhM2RkNjExOWJmMWY1ZmFiY2M3ZmEzMGFhYTBjZGVjYTFiZjcyNzA0Yzc5YmY5YmVmM2VhZTNlN2ZlYTU4M2I2YWMwYzMxZGM3M2ZhNWUyNjM4ZDk2MmFlYSIsInZlcnNpb24iOiIwMCJ9; ecs_token=eyJkYXRhIjoiNWVjMzc1MzNjZDhiYmJhZTEwYWQ1NDMzYjIyNDJkODc2M2Q4ZWU2M2U4ZjAxYTk5OGEzNTQ2NDcwMDFmNzI3NDZmNDdiNWZiYjQyMDk3YzNiNzZjMDE3MjEwYzg3MWM5NzM0ZDZhMzgzYjE2ODc5YzllODM3ZjliOGY2ZTI4ZmZkM2FlNTQ1NjFhMmJhM2ZlYzFhYTQwOTIxNWVjMWE5ZTM0Zjk3NDVmYjI0MWRiZWJkNzIxY2QwY2JjZjJiNzZlIiwidmVyc2lvbiI6IjAwIn0=; jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtb2JpbGUiOiIxNTYwMDAxNTgwMCIsInBybyI6IjAxMSIsImNpdHkiOiIxMTAiLCJpZCI6IjQ3ODZkMTBiZmQxMzE4NzU5ODg5NThiZWIzYmNiYWU3In0.h6qN44jwkC57Sa2Hj2pJh_38glfUYB6_n_nmEjIN7tY; ecs_acc=sQfiZ/aNK1U/688zYkP5aSRilTA420WsBgD2JyBd7/n1cTFUqtt1Bs9QrUeykPtA9KRPZ9f6PWqs7wl0h5Q8yc8cPvvT9yY21eYVcG644+oBMJDFlNxWHygyCGTgZdqEGG2FE6YHLM+HBO5C7e/+mGaSxXbRi9lh2SYI50pSosM=; logHostIP=null; c_sfbm=234g_00;devicedId=7865969553f94e9c9fe6654e89cbefc0");
-        new ChinaUnicomServiceImpl().queryUserInfo4HomePage(telecomForm);
     }
 
     @Override

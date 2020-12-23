@@ -8,6 +8,7 @@ import cn.yiidii.openapi.unicommeituan.service.ChinaUnicomInfoService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import lombok.extern.slf4j.Slf4j;
+import lombok.RequiredArgsConstructor;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,10 +19,10 @@ import java.util.Objects;
 
 @Service
 @Slf4j
+@RequiredArgsConstructor
 public class ChinaUnicomInfoServiceImpl implements ChinaUnicomInfoService {
 
-    @Autowired
-    private ChinaUnicomInfoMapper chinaUnicomInfoMapper;
+    private final ChinaUnicomInfoMapper chinaUnicomInfoMapper;
 
     @Override
     public List<ChinaUnicomInfo> getAllChinaUnicom() {

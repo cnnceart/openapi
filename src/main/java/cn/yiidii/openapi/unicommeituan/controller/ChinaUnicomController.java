@@ -5,7 +5,7 @@ import cn.yiidii.openapi.unicommeituan.controller.form.ChinaUnicomLoginForm;
 import cn.yiidii.openapi.unicommeituan.controller.form.TelecomForm;
 import cn.yiidii.openapi.unicommeituan.service.ChinaUnicomService;
 import com.alibaba.fastjson.JSONObject;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,10 +25,10 @@ import java.util.Objects;
 @RestController
 @Validated
 @RequestMapping("chinaUnicom")
+@RequiredArgsConstructor
 public class ChinaUnicomController {
 
-    @Autowired
-    private ChinaUnicomService chinaUnicomService;
+    private final ChinaUnicomService chinaUnicomService;
 
     @GetMapping("sendRandomNum")
     public Result sendRandomNum(@RequestParam(required = false) @NotBlank(message = "请输入手机号码") @Pattern(regexp = "\\d{11,}", message = "手机号格式不正确") String mobile) {

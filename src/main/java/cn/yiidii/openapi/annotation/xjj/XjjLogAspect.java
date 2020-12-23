@@ -7,6 +7,7 @@ import cn.yiidii.openapi.entity.xjj.XjjLog;
 import cn.yiidii.openapi.xjj.service.ICdkService;
 import cn.yiidii.openapi.xjj.service.IXjjLogService;
 import lombok.extern.slf4j.Slf4j;
+import lombok.RequiredArgsConstructor;
 import org.apache.commons.lang3.StringUtils;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
@@ -23,19 +24,13 @@ import java.util.Objects;
 @Aspect
 @Component
 @Slf4j
-public class XjjLogAscept {
+@RequiredArgsConstructor
+public class XjjLogAspect {
 
-    @Autowired
-    private ICdkService cdkService;
-
-    @Autowired
-    private HttpServletRequest request;
-
-    @Autowired
-    private IPUtil ipUtil;
-
-    @Autowired
-    private IXjjLogService xjjLogService;
+    private final ICdkService cdkService;
+    private final HttpServletRequest request;
+    private final IPUtil ipUtil;
+    private final IXjjLogService xjjLogService;
 
     @After(value = "@annotation(cn.yiidii.openapi.annotation.xjj.XjjLogAnnotation)")//已注解 @xjjLog 为切点
     public void verifyApiLimit(JoinPoint joinPoint) throws Throwable {
