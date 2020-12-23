@@ -16,7 +16,6 @@ import com.alibaba.fastjson.JSONObject;
 import lombok.extern.slf4j.Slf4j;
 import lombok.RequiredArgsConstructor;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
@@ -38,9 +37,7 @@ import java.util.Map;
 public class ChinaUnicomServiceImpl implements ChinaUnicomService {
 
     private final IPUtil ipUtil;
-
     private final HttpServletRequest request;
-
     private final HttpClientUtil httpClientUtil;
 
     private static final String DONT_TIP = "DONT_TIP";

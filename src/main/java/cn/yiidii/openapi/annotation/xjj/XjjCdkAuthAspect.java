@@ -1,18 +1,17 @@
 package cn.yiidii.openapi.annotation.xjj;
 
 import cn.hutool.core.date.DateUtil;
-import cn.yiidii.openapi.entity.xjj.Cdk;
 import cn.yiidii.openapi.base.exception.ServiceException;
+import cn.yiidii.openapi.entity.xjj.Cdk;
 import cn.yiidii.openapi.xjj.common.NewsType;
 import cn.yiidii.openapi.xjj.service.ICdkService;
 import cn.yiidii.openapi.xjj.service.INewsService;
-import lombok.extern.slf4j.Slf4j;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.reflect.MethodSignature;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;

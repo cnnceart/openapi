@@ -38,5 +38,5 @@ justauth:
     github:
       client-id: 4417952588fc4ba8b9d6
       client-secret: 81220cef45c226c02697d07b7ebb6638c552a01e
-      redirect-uri: http://yiidii.cn:65531/oauth/callback
+      redirect-uri: http://openapi.yiidii.cn:65531/oauth/callback
 

@@ -40,6 +40,8 @@ public class RestAuthController {
         try {
             authResp = authRequest.login(callback);
         } catch (Exception e) {
+            log.info("{}", e);
+            log.info("{}", JSONObject.toJSON(authResp));
             return authResp.getMsg();
         }
         log.info("Auth Response: {}", JSONObject.toJSONString(authResp));

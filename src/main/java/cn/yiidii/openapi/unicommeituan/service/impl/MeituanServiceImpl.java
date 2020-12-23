@@ -11,6 +11,7 @@ import cn.yiidii.openapi.unicommeituan.service.ChinaUnicomInfoService;
 import cn.yiidii.openapi.unicommeituan.service.MeituanService;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import lombok.RequiredArgsConstructor;
 import org.apache.commons.lang3.StringUtils;
@@ -34,8 +35,9 @@ public class MeituanServiceImpl implements MeituanService {
     /**
      * 美团下单线程池
      */
+    @Autowired
     @Resource(name = "meituanTaskExecutor")
-    private final ThreadPoolTaskExecutor meituanTaskExecutor;
+    private ThreadPoolTaskExecutor meituanTaskExecutor;
 
     /**
      * 异步执行抢券
