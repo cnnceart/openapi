@@ -1,4 +1,4 @@
-package cn.yiidii.openapi.ascept.xjj;
+package cn.yiidii.openapi.annotation.xjj;
 
 import cn.yiidii.openapi.annotation.xjj.XjjLogAnnotation;
 import cn.yiidii.openapi.common.util.IPUtil;

@@ -1,16 +1,7 @@
-#http:
-#  server:
-#    port: 65531 #65531自动跳转8443
-
 server:
-#  port: 8443
   port: 65531
   servlet:
     context-path: /
-#  ssl:
-#    key-store: classpath:cert/demo.keystore
-#    key-store-password: 12345678
-#    key-alias: openapi-tomcat
 
 # logback 配置
 logging:

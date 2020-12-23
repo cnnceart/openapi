@@ -1,4 +1,4 @@
-package cn.yiidii.openapi.ascept.xjj;
+package cn.yiidii.openapi.annotation.xjj;
 
 import cn.hutool.core.date.DateUtil;
 import cn.yiidii.openapi.annotation.xjj.XjjCdkAuthValidation;
