@@ -17,7 +17,7 @@ public class ServerJNotify {
     @Autowired
     HttpClientUtil httpClientUtil;
 
-    public void triggerNotify(String scKey,String text, String desp) {
+    public void triggerNotify(String scKey, String text, String desp) {
         try {
             String url = "https://sc.ftqq.com/" + scKey + ".send";
             Map<String, String> params = new HashMap<>();

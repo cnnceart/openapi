@@ -52,7 +52,7 @@ public class ThreadPoolConfig {
      *
      */
     @Bean("scheduleTaskExecutor")
-    public Executor scheduleTaskExecutor() {
+    public ThreadPoolTaskExecutor scheduleTaskExecutor() {
         ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
         executor.setCorePoolSize(corePoolSize);
         executor.setMaxPoolSize(maxPoolSize);
@@ -71,7 +71,7 @@ public class ThreadPoolConfig {
      * @return
      */
     @Bean("meituanTaskExecutor")
-    public Executor meituanTaskExcutor() {
+    public ThreadPoolTaskExecutor meituanTaskExcutor() {
         ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
         executor.setCorePoolSize(16);
         executor.setMaxPoolSize(100);

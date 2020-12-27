@@ -11,12 +11,10 @@ import cn.yiidii.openapi.unicommeituan.service.ChinaUnicomInfoService;
 import cn.yiidii.openapi.unicommeituan.service.MeituanService;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import io.swagger.annotations.ApiOperation;
-import lombok.extern.slf4j.Slf4j;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.stereotype.Service;
 
@@ -35,7 +33,6 @@ public class MeituanServiceImpl implements MeituanService {
     /**
      * 美团下单线程池
      */
-    @Autowired
     @Resource(name = "meituanTaskExecutor")
     private ThreadPoolTaskExecutor meituanTaskExecutor;
 
