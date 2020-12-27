@@ -65,7 +65,7 @@ public class DuoDianServiceImpl implements IDuoDianService {
             }
         }
 
-        log.info("{}", rewordStrList);
+        log.info("{}-{}", mobile, rewordStrList);
         serverJNotify.triggerNotify("SCU86980T340dc43602aad5ca9bdeb5bff70577c35e59cff78a15e", String.format("%s(%s)", title, mobile), StringUtils.join(rewordStrList, ", "));
     }
 
