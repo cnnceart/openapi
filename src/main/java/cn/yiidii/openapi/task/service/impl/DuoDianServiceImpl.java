@@ -35,6 +35,7 @@ public class DuoDianServiceImpl implements IDuoDianService {
     public void checkIn(String mobile, String cookie) throws Exception {
         long currTime = System.currentTimeMillis();
         String url = "https://appapis.dmall.com/static/signInProccess.jsonp?callback=jQuery22302673548686" + randSixCode() + "_" + currTime + "&isNew=1&phone=" + mobile + "&apiVersion=&platform=%E5%BE%AE%E4%BF%A1&venderId=-1&storeId=-1&addressId=&longitude=&latitude=&nowLongitude=&nowLatitude=&_=" + currTime;
+        log.info("{}", url);
         HttpClientResult result = httpClientUtil.doGet(url);
         int code = result.getCode();
         if (200 != code) {
