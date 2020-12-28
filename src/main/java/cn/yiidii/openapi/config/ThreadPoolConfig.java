@@ -65,6 +65,25 @@ public class ThreadPoolConfig {
         return executor;
     }
 
+
+    /**
+     * 定时任务线程池
+     *
+     */
+    @Bean("generalExecutor")
+    public ThreadPoolTaskExecutor generalExecutor() {
+        ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
+        executor.setCorePoolSize(corePoolSize);
+        executor.setMaxPoolSize(maxPoolSize);
+        executor.setQueueCapacity(queueCapacity);
+        executor.setKeepAliveSeconds(keepAliveTime);
+        executor.setThreadNamePrefix(scheduleTaskExecutorThreadNamePrefix);
+        executor.setRejectedExecutionHandler(new ThreadPoolExecutor.CallerRunsPolicy());// 由调用线程（提交任务的线程）处理该任务
+        executor.initialize();
+        log.info("generalExecutor init... : {}", JSONObject.toJSONString(executor));
+        return executor;
+    }
+
     /**
      * 美团执行下单相关 线程池配置
      *

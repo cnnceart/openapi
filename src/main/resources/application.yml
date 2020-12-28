@@ -27,6 +27,18 @@ spring:
   devtools:
     restart:
       enabled: true
+  redis:
+    database: 0
+    host: yiidii.cn
+    port: 6379
+    password: 123465
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+    timeout: 5000
 
 #mybatis
 mybatis-plus:
