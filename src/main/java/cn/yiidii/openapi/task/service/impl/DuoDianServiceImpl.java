@@ -76,7 +76,7 @@ public class DuoDianServiceImpl implements IDuoDianService {
     }
 
     public String randSixCode() {
-        return String.valueOf((Math.random() * 9 + 1) * 100000);
+        return String.valueOf((int) ((Math.random() * 9 + 1) * 100000));
     }
 
     public static void main(String[] args) {
