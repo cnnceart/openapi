@@ -5,6 +5,7 @@ import cn.yiidii.openapi.common.util.RedisUtil;
 import cn.yiidii.openapi.smsbomb.service.ISmsBombService;
 import cn.yiidii.openapi.smsbomb.service.dto.SmsBombRunnable;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.stereotype.Service;
 
@@ -23,6 +24,7 @@ import java.util.Objects;
  */
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class SmsBombServiceImpl implements ISmsBombService {
 
     @Resource(name = "generalExecutor")
@@ -41,6 +43,8 @@ public class SmsBombServiceImpl implements ISmsBombService {
         if (!expireSucc) {
             throw new ServiceException("起飞失败，原因：设置redis失败");
         }
+
+        log.info("{}正在起飞", mobile);
 
         List<String> interfaceList = getAllInterface();
         for (String url : interfaceList) {

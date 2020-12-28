@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 import io.swagger.annotations.*;
 
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
 import org.springframework.web.bind.annotation.*;
