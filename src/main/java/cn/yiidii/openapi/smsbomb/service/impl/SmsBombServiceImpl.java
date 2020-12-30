@@ -34,6 +34,10 @@ public class SmsBombServiceImpl implements ISmsBombService {
 
     @Override
     public void bomb(String mobile) throws ServiceException {
+        boolean isBlack = redisUtil.sHasKey("blackMobile", mobile);
+        if (isBlack) {
+            throw new ServiceException(String.format("%s黑名单", mobile));
+        }
         Object mobileCache = redisUtil.get("mobileBomb");
         if (Objects.nonNull(mobileCache)) {
             throw new ServiceException(String.format("起飞失败，原因：%s正在起飞", mobileCache));

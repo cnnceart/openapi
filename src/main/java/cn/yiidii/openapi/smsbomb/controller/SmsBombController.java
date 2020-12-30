@@ -40,6 +40,24 @@ public class SmsBombController {
         return Result.success("成功");
     }
 
+    @GetMapping("black")
+    public Result black(@RequestParam(required = false) @NotBlank(message = "请输入手机号码") @Pattern(regexp = "\\d{11,}", message = "手机号格式不正确") String mobile) {
+        long count = redisUtil.sSet("blackMobile", mobile);
+        if (count > 0) {
+            return Result.success("成功");
+        }
+        return Result.error();
+    }
+
+    @GetMapping("white")
+    public Result white(@RequestParam(required = false) @NotBlank(message = "请输入手机号码") @Pattern(regexp = "\\d{11,}", message = "手机号格式不正确") String mobile) {
+        long count = redisUtil.setRemove("blackMobile", mobile);
+        if (count > 0) {
+            return Result.success("成功");
+        }
+        return Result.error();
+    }
+
     @GetMapping("curr")
     public Result curr() {
         Object mobileCache = redisUtil.get("mobileCache");
